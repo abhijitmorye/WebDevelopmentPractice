@@ -1,0 +1,28 @@
+Flex-direction : row column, row-reverse.column-reverse
+
+justify-content: flex-start,flex-end,center,space-between,space-around
+
+flex-wrap: wrap ,nowrap (will wrap items on next line(row or column according to flex direction property
+
+align-item: center,flex-start,flex-end,baseline(all items will be sync),strech. set at container level which contains items.
+
+align-slef: align-slef property align the individual item in flexbox. set at item level
+
+order: gives order to the items (smaller order: first in list --larger valu--last in list)
+
+flex-basis: specifies the minimum width of items (flex-basis: 100px)
+
+flex-grow: specifies the ratio of width of all items with respective to flex-basis i.e if 3 items are there and width of all item is 100px but 2nd item flex-grow: 3 then 2nd items will be three time bigger than remaining two items. 
+
+			If all are set to 1 then all items will grow same as per screen size or conatiner size. (default value is 0)
+			
+
+flex-shrink : defines the shrinakge ratio of items. if 3 items are there and 2nd item's flex-shrink: 3 then it will shrink 3 times faster than rest of the items.
+			  if all set to 1 then all will shrink with same amount.
+
+
+flex: summarize all three properties i.e. grow,shrink,flex-basis
+
+	  Syntax --> flex: grow_value,shrink_value,flex-basis(width)
+	  
+	  e.g-->  flex: 1,1,100

@@ -1,0 +1,20 @@
+Opacity : Defines the transperancy of element --> 0 means fully transperant and 1 means fully visible --> values can be between 0 to 1
+
+Gradient : transition between two colors --> 
+
+two types of gradient :
+
+1) radial-gradient : gradient or transition of color starts from the center and moves around the center 
+
+		stntax: 
+					background: radial-gradient(red 10% , orange 20%, yellow 40%)
+
+
+2) linear-gradient : gradient starts linearly from one particular direction i.e to right, to left, to bottom, to top, to top-right etc.
+
+		Syntax : 
+					background: linear-gradient(to right,red,blue,green,yellow)
+					
+					
+
+3) Viewheight(vh) OR viewwidth(vw) : 1 vh or 1 vw is eaqual to the 1% of your media width i.e mobile,laptop etc.

@@ -1,0 +1,85 @@
+Advanced Selectors :
+
+
+<html>
+<head>
+</head>
+<body>
+<h2>Lion</h2>
+<a>Lion Link</a>
+<h2>Tiger</h2>
+<a>Tiger Link</a>
+<h2>Cheetah</h2>
+<a>Cheetah Link</a>
+<h2>monkey</h2> 
+<p> This is monkey </p>
+<a>monkey Link</a>
+
+<div>
+
+<h2>This is first child elements of div </h2>
+<p>this is second child element of div</p>
+
+</div>
+
+<ul>
+<li>Abhijit</li>
+<li>Hari</li>
+<li>Morye</li>
+</ul>
+</body>
+</html>
+
+
+1]  this select will color all the anchor elements which are immidiate follower of h2 tags (so applied to Lion link,Tiger link and Cheetah link but not for Monkey link 
+
+h2 + a {
+
+	color: red
+}
+
+
+2] this selector will style the element which is immidiate follower of pre element but they both element should be child of same parent element.
+
+
+h2 ~ p {
+color : purple
+}
+
+
+3] this selector says that style the element of which is child of preceding element
+
+ul > li {
+	color: yellow;
+}
+
+
+4] This selector is opposite of previous one. It says that style the parent element for which child element is specified or to which child element is traced back.
+
+ul li {
+	color: navyblue;
+}
+
+
+5] Attribute selector :
+
+<h2 class="title"> Naruto </h2>
+<img src="path">
+
+
+h2[class=title] {
+
+	color : red;
+	
+}
+
+img[src="path"]{
+	border: 2px solid red;
+}
+
+
+^ --> styles all the elemnts that starts with string in attribute value --> img[src^="../img/..."]
+
+$ --> styles all the elements that ends with given string in attribute value --> img[src$="../img/"]
+
+* --> styles all the elements that contains  given string anywhere in attribute value --> img[src*="../../img/.."]

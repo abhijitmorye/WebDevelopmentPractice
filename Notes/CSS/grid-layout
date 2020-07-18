@@ -1,0 +1,34 @@
+Grid Layout :
+
+display: grid
+
+grid-template-columns : specifies the no of columns with theire width: for eg: grid-template-columns: 10px 20px 40px (create 3 grupns i n grfs whith their width.
+
+grid-column-gap: specifies the gap between two adjacent column.
+
+
+
+
+grid-template-rows: specifies the no.of rows with their height for eg: grid-template-rows: 10px 20px 30px (creates the 3 rwos with 10px, 20px and 30px heights respectively)
+
+
+grid-row-gap: specifies the gap between two adjacent row.
+
+grid-gap: shorthand property for grid-column-gap and grid-row-gap --> syntax:--> grid-gap: row-gap-value column-gap-value
+
+justify-content: same as flexbox.. justify-content: start,end,center,space-evenly(same as space-between in flexbox),space-around (it moves the content horizontally..same for flexbox and grid)
+
+
+align-content: same as flexbox--> space-evenly,space-between(create void between items and push then far aside thus creating space between)
+								  space-around,start,end 
+								  it moves the the content vertically.same for flexbox and grid)
+
+
+grid-column: spawn the space of item to which this property has assigned from specified to starting line to ending line. syntax--> grid-column: 1 / 3 (i.e take space of item from starting line or column 1 to ending column 3)
+
+grid-row: spawn the space of item to which this property has assigned from specified to starting line to ending line. syntax--> grid-row: 1 / 3 (i.e take space of item from starting line or row 1 to ending row 3)
+
+
+grid-area: shorthand property for above two properties.
+
+		   synatx: grid-area: row-start / column-start / row-end / column-end

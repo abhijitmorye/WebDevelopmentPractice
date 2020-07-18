@@ -1,0 +1,122 @@
+Transisition property:
+
+
+1)  smoothens the animations that we apppy to the elements in html
+
+
+
+eg :  button {
+				background-color: red;
+				transistion: background-color 0.5s ease-in-out 1s
+			 }
+			 
+		
+	  button:hover {
+					background-color: yellow}
+					
+					
+	in above example, whenever you hove on the button, its background color changes from red to yellow. Here transition property define how we can transition background color from red to yellow.
+	
+	Syntax--> transition: property duration style delay
+	
+						property: property(property1,property2,all) to which animation or effect is applied ( in example its is background-color)
+						
+						duration : duration bwtween transition from one effect to another given effect ( in example we have given duration as 0.5s so color from red to yellow will be changes after 0.5s from the moment you hover over button)
+						
+						style: different style that are applied (ease,ease-in-out,linear,speedy)
+						
+						delay: delay before effect actually takes place ( in example. we have given delay of one sec, so after 1 second our effect will actually take place)
+						
+						
+2) every browser has different support for transition, to specify the browser specific transition property, we have to add prefix for each browser;
+
+		-webkit-<css property> : for chrome and safari
+		-moz-<css property>
+		
+		
+
+Transform property: 
+
+		specifies the transformation of elements
+		
+		
+		1) translate(x-shift,y-shift) : translate or move the elements aling x and y axis
+		
+		   syntax--> transform: translate(x-axis-shift,y-axix-shift) i.e (horizontal shift, vertical shift) i.e (positive means right horizontal-negative means left horizontal && positive means in top direction and negative menas downward direction)
+		   
+		   
+		2) scale(decimal value) : scales the elements by specified value.
+		
+			syntax--> scales the item to which this property is applied.
+			
+		3) rotate(angle) : rotate the element by specifies angle.
+		
+		4) skew(angle) : skews or rotate the elements by specified angle.
+		
+		
+		
+		
+Animation property:
+
+1) can write animation by specifying "@keyframes" keyword
+
+syntax--> @keyframes name-of-animation(usercoicename) {
+			
+			from(or 0%) {property/style: value1;} --// here start property with specified value i.e. value1
+			
+			to (or 100%) {property/tyle: value2} --// ehere end property with specified value i.e. value2
+			
+			}
+			
+			
+	0% or 100% means instead of mentioning from or to starting point, we can give percentage or steps like at 20%,at 40% and then specify value at that point
+	
+	
+e.g. --> @keyframes black-to-red {
+
+			0% {
+			background-color: red;
+			}
+			
+			50% {
+			background-color: orange;
+			}
+			
+			100% {
+			background-color: yellow;
+			}
+			
+			}
+			
+
+2) how to apply animation that we have created to an element: 
+
+		use syntax--> animation-name: name_of_animation_we_have_given
+		
+		
+3) how to start an animation:
+	
+		even though we assign animation-name to  element, we cant see animation running why? bcuz we need to specify the duration for which animation will run.
+		
+		use syntax--> animation-duration: 50s --// this will start animation once you load the site and run it for the 50s
+		
+
+4) how to specify the speed of animation?
+
+		use syntax--> animation-timing-function: (ease,ease-in,ease-out,ease-in-out,linear)
+		
+5) how to give delay before starting an animation?
+
+		use syntax--> animation-delay: 2s
+		
+6) how to specify iteration count for animation?
+
+		use-syntax--> animation-iteration-count: 2
+		
+		we can specify the animation to be run infinitely till user leave the site by using infinite keyword.
+		
+7) how to reverse the animation?
+
+		use synatx--> animation-direction: noraml
+										 : reverse-- will reverse the animation i.e will start animation from 100% to 0%
+										 : alternate-- will alternate between two normal and reverse.
