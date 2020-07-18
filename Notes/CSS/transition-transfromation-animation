@@ -120,3 +120,8 @@ e.g. --> @keyframes black-to-red {
 		use synatx--> animation-direction: noraml
 										 : reverse-- will reverse the animation i.e will start animation from 100% to 0%
 										 : alternate-- will alternate between two normal and reverse.
+										 
+
+8) how to load animation?
+
+		use syntax--> animation-fill-mode: backwards --will load animation from backward i.e from 100% to 0%

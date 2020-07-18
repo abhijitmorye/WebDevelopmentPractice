@@ -17,7 +17,7 @@ Dark green: #28b485
 body {
     font-family: "Lato",sans-serif;
     font-weight: 400;
-    font-szie: 16px;
+    font-size: 16px;
     line-height: 1.7;
     color: #777;
     padding: 1.87em;
@@ -43,17 +43,20 @@ body {
     height: 35px;
 }
 
+
 .header-title-box {
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 
 .header-title {
     color: #ffffff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .header-title-main {
@@ -118,5 +121,86 @@ body {
     }
 }
 
+
+.btn:link,
+.btn:visited {
+
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+
+    animation-name: moveInTop;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    color: #777;
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.btn::after {
+
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn-white::after {
+ 
+    background-color: #fff;
+
+}
+
+.btn:hover::after {
+
+    transform: scaleX(1.5) scaleY(1.7);
+    opacity: 0;
+}
+
+.btn-animated {
+
+    animation-name: moveInTop;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.75s;
+    animation-fill-mode: backwards;
+
+}
+@keyframes moveInTop {
+
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
 
 
