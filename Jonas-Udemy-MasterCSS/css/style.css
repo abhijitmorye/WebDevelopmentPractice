@@ -40,19 +40,19 @@ body {
     position: relative;
 }
 
-.header-logo {
+.header-box__header-logo {
 
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header-box__logo {
     height: 3.5rem;
 }
 
 
-.header-title-box {
+.header-box__header-title-box {
     position: absolute;
     left: 50%;
     top: 45%;
@@ -67,7 +67,7 @@ body {
     margin-bottom: 6rem;
 }
 
-.header-title-main {
+.header-title--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -79,7 +79,7 @@ body {
     animation-timing-function: ease-out;
 }
 
-.header-title-sub {
+.header-title--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -157,7 +157,7 @@ body {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
     color: #777;
     background-color: #fff;
     font-weight: 700;
@@ -177,7 +177,7 @@ body {
     transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
  
     background-color: #fff;
 
@@ -189,7 +189,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
 
     animation-name: moveInTop;
     animation-duration: 0.5s;

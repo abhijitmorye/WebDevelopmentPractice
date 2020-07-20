@@ -13,20 +13,17 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
-        <header class="header-box">
-            <div class="header-logo">
-                <img src="img/logo-white.png" alt="logo" class="logo">
+        <header class="header-box"> <!-- main block element(B ib BEM)-->
+            <div class="header-box__header-logo"> <!-- sub element in main block element (E in BEM)-->
+                <img src="img/logo-white.png" alt="logo" class="header-box__logo"> <!-- sub element in main block element (E in BEM)-->
             </div>
-
-            <div class="header-title-box">
-                <h1 class="header-title">
-                    <span class="header-title-main">Outdoors</span>
-                    <span class="header-title-sub">is where life happens</span>
+            <div class="header-box__header-title-box"> <!-- sub element in main block element (E in BEM)-->
+                <h1 class="header-title"> <!--this is another block that can be reused so this is block element (B in BEM)-->
+                    <span class="header-title--main">Outdoors</span> <!--modifier for element (M in BEM)-->
+                    <span class="header-title--sub">is where life happens</span> <!--modifier for element (M in BEM)-->
                 </h1>
-                <a href="#" class="btn btn-white btn-animated">discover our tours</a>
-            </div>
-            
-        </header>
-        
+                <a href="#" class="btn btn--white btn--animated">discover our tours</a> <!--has both Block and Modifier-->
+            </div>            
+        </header>        
     </body>
 </html>

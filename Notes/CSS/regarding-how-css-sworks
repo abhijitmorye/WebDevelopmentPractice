@@ -1,0 +1,91 @@
+Useful notes regarding how browser decides value for font,height in pixels:
+
+
+1. Each property has an initial value, used if nothing is declared
+
+2. Browser defines the root-font-size for each page.
+
+3. Percentages-font-sizes are measured relative to the parent's font-size.
+
+4. Percentage-length is measured relative to the width of parent's.
+
+5. If font is specified in em then its pixel value is equivalent to the (specified ems * font-size of parent) -- eg. 3em -- 3* 24px if 24px is font-size in parent.
+
+6. If length is specified in em then its pixel value is equivalent to the (specified ems * font-size of currnet/itself) -- eg. width: 3em anf font-size: 10px -- width= 3* 10px
+
+7. rem are always measured relative to the document's root font-size.
+
+
+
+
+Useful notes regarding inheritence in CSS:
+
+1. Inheritence passes the value for some specific properties from parents to children - more maintainable code
+
+2. Properties related to text are inherited: font-family ,font-size,font-weight
+
+3. The computed value is inherited not the declared value
+
+4. Inheritence for property works if no one else declared the the value for property
+
+5. The inherit keyword forces inheritence on a certain property.
+
+6. The initial keyword resets a property to its inital values.
+
+
+
+
+Box models : Inline, Block-level,Inline-block
+
+
+1. Block Level : elements formatted visyally as block
+				 100% of parent's width
+				 vertically,one after another
+				 Box-model applies as showed
+				 
+				 eg: 
+				 display: flex,list-item,table
+				 
+				 
+2. inline level : elements formatted visually in single line
+				  takes only contents length
+				  No line-breaks
+				  No heights-width
+				  Paddings-margins only horizontally'
+				  
+				  eg:
+				  display: inline
+				  
+				 
+3. inline-block level : A mix of block and inline
+						occupies only content length
+						No line breaks
+						box-model applies i.e can specify padding,margin etc
+						
+					
+						eg:
+						display: inline-block
+						
+						
+
+Positioning schemes: Normal flow,Absolute and Floats
+
+1. Normal Flow : default positioning schemes
+			     Not floated
+				 not absolutely positioned
+				 elements laid aout according to their source order
+				 
+				 
+				 eg--> position: relative
+		
+2. Floats flow : Elements are removed from the normal flow
+				 Text and inline elements are wraped around the floated elements
+				 The container will not adjust its height of elements
+				 
+				 eg--> float: left,right
+				 
+3. Absolute Flow : Elements is removed from the normal flow
+				   No impact on surrounding elements and contents
+				   We use right,left,top and bottom to specify the positioning of an element
+				   
+				   eg--> position: absolute,fixed
