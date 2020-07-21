@@ -1,0 +1,209 @@
+SASS:
+
+
+Sass is CSS preprocessor, an extension to the css that add power and elegance to the code.
+
+
+sass source code ---> sass compiler ---> Compiled CSS code.
+
+
+Sass features :
+
+1.Variables: for reusable values such as colors,font-sizes,spacing etc.
+
+2.Nesting : to nest selectors into one another allow us to write less code.
+
+3.Operators: for mathematical operations right inside of css.
+
+4.Partials and imports: to write CSS in different files and importing them all into one single file.
+
+5.Mixins : to write reusable pieces of CSS code.
+
+6.Functions: same as mixins but functions produce a value that can be used/returned.
+
+7.Extends: to make different selectors inherit declarations that are common to all of them.
+
+8.Control-directives: for writing complex code using coordinates and loops (not covered in this course)
+
+
+
+Variables :
+
+syntax : in css file, declare varibles as follows :
+
+		 $variable_name : color
+
+		 and use it any where
+
+		 like ;
+
+		 nav {
+
+			background-color: $variable_name
+		 }
+
+
+Nesting :
+
+syntax: selectors can be nested in one another in SCSS.
+
+syntax: HTMl COde :
+
+		<nav>
+         <ul class="navigation">
+          <li> <a href="#">About Us</a></li>
+          <li> <a href="#">Pricing</a></li>
+          <li> <a href="#">Contact Us</a></li>
+         </ul>
+         <div class="button">
+          <a href="#" class="btn-main">Sign Up</a>
+          <a href="#" class="btn-quote">Get Quote</a>
+         </div>
+        </nav>
+
+
+		CSS code :
+
+		* {
+           margin: 0;
+           padding:0;
+          }
+
+        $color-primary: yellow;  // variable declaration
+        $color-secondary: pink;	 // variable declaration
+
+         nav {
+           background-color: $color-primary;
+              }
+
+        .navigation {
+            list-style-type: none;
+            margin: 30px;
+
+            li {                 // in simple term it means that navigation li {..code..}
+              margin-left: 5px;
+              display: inline-block;
+              padding: 0px;
+
+              &:first-child {    // navigation li:first-child {..code..}
+              margin-left: 0px;
+              }
+            }
+        }
+
+
+Mixin: Mixin is reusable code that can be reused anywhere in CSS to reduce the code.
+
+Syntax :
+
+to declare mixin, use below syntax
+
+		@mixin <mixin_name> {
+
+		code {
+
+		}
+
+		}
+
+How to use declared mixin:
+
+		selector {
+
+		@include <mixin_name>
+
+		}
+
+We can pass argument to the mixin while calling mixin in selectors
+
+suppose we have mixin as follows :
+
+		$button-text-color: red;
+
+		@mixin text-color-change($col) {
+
+		color: $(col)
+		}
+
+
+		button {
+		@inculde text-color-change($button-text-color)
+		}
+
+
+Functions :
+
+
+functions are same like mixin but they return some value
+
+how to write function:
+
+syntax:  @function <function_name>($arg1,$arg2,..) {
+
+			@return $arg1/$arg2;
+	      }
+
+how to use declared function:
+
+syntax:  selectors {
+
+		 width: <function_name>(10,2); // it will return the value
+		 }
+
+
+
+Extend : For code reusability
+
+
+Syntax: to define extend
+
+		%extend-name {
+
+		////code///
+
+		}
+
+Syntax: How to use it
+
+		selector1 {
+
+		@extend %extend-name;
+		property1: value1;
+		}
+
+		selector2 {
+
+		@extend %extend-name;
+		property2: value2;
+		}
+
+
+
+How to setup SASS locally on machine:
+
+1.install Node.js or downlaod zip file for Node.js
+
+2.extract zip files
+
+3.add path for Node.js in environmnet variables path
+
+4.go to the project folder
+
+5.initialize package.json file using command "npm init"
+
+6.provide name of project when prompted, and other things
+
+7.now install node-sass tool whoch will complie the scss file to css files
+
+8.use command "npm install node-sass --save-dev"  // --save-dev will tell that this node-sass tool is for development tool
+
+9.once installed. we can use node-sass to compile .scss file to .css files
+
+10.for that, open package.json file that has been created from step 5 and in script section add following command
+
+11."compile-sass" : "node-sass <path_for_scss_input_file> <path_for_css_output_file -w" // -w command will keep watch on .scss file whenever we make changes
+
+12.now in command prompt enter command "npm run compile-sass" and  write code/changes in .scss file, css file will be automatically updated.
+
+
+Note: you don't have ship node_modules folder that you get when you install node-sass module, just ship necessary file along with packages.json file and run command "npm install". This will install all necessary file.

@@ -1,0 +1,18 @@
+h1 {
+ width: 500px;
+color: #e7305b;
+border-width: 5px;
+border-color: black;
+border-left-width: 10px;
+border-left-color: red;
+border-style: none none none solid;
+}
+
+img {
+  background-color: #e7305b;
+}
+
+p {
+  font-style: bold;
+  font-family: cursive 50deg;
+}
