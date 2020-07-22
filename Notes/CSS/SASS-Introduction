@@ -207,3 +207,50 @@ How to setup SASS locally on machine:
 
 
 Note: you don't have ship node_modules folder that you get when you install node-sass module, just ship necessary file along with packages.json file and run command "npm install". This will install all necessary file.
+
+
+
+SASS floder structure :
+
+
+*--main.scss --> main scss file wheere we import all other files (to import other files use keyword-- @import "abstracts/mixin";)
+
+	
+*--abstracts --> folder for mixins,fuctions and variables
+
+	--_functions.scss
+	
+	--_mixins.scss
+	
+	--_variables.scss
+
+
+*--base --> base folder for all basic like typography,base,animations,utilities
+	
+	-- _animations.scss
+	
+	--_base.scss
+	
+	--_typography.scss
+	
+	--_utilities.scss
+
+	
+*--components --> compoenents in html like button,link etc.. singleton components that can be reused.
+
+	--_buttons.scss
+	
+	
+*--layout --> layout on websites such as headers,footers,middle container etc
+
+	--_header.scss
+	
+	--_footer.scss
+	
+
+*--pages --> pages on webdites sucs as homepage,checkoutpage,aboutme pages etc
+
+	--_home.scss
+	
+
+
