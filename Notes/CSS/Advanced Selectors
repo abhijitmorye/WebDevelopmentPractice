@@ -78,7 +78,7 @@ img[src="path"]{
 }
 
 
-^ --> styles all the elemnts that starts with string in attribute value --> img[src^="../img/..."]
+^ --> styles all the elemnts that starts with string in attribute value --> img[src^="/img/..."]
 
 $ --> styles all the elements that ends with given string in attribute value --> img[src$="../img/"]
 

@@ -1,3 +1,39 @@
+Psuedo-classes:
+
+1. :not classes : it is like not in java
+
+		syntax: selectors:not(:last-child/first-child/nth-child(N)){
+		
+		style
+		
+		}
+		
+		so apply the style to the all elements except last-child
+		
+		
+		eg:
+		
+		<ul>
+		<li>A</li>
+		<li>B</li>
+		<li>C</li>
+		</ul>
+		
+		
+		li:not(:last-child) {
+		
+		background-color: red;		
+		
+		}
+		
+		so red background color will be applied to all list item except last child.
+
+
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+
 Psuedo elements :
 
 
