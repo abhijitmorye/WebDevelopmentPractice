@@ -11,7 +11,7 @@ Advanced Selectors :
 <a>Tiger Link</a>
 <h2>Cheetah</h2>
 <a>Cheetah Link</a>
-<h2>monkey</h2> 
+<h2>monkey</h2>
 <p> This is monkey </p>
 <a>monkey Link</a>
 
@@ -31,7 +31,7 @@ Advanced Selectors :
 </html>
 
 
-1]  this select will color all the anchor elements which are immidiate follower of h2 tags (so applied to Lion link,Tiger link and Cheetah link but not for Monkey link 
+1]  this select will color all the anchor elements which are immediate follower of h2 tags (so applied to Lion link,Tiger link and Cheetah link but not for Monkey link
 
 h2 + a {
 
@@ -39,7 +39,7 @@ h2 + a {
 }
 
 
-2] this selector will style the element which is immidiate follower of pre element but they both element should be child of same parent element.
+2] this selector will style the element which is immediate follower of pre element but they both element should be child of same parent element.
 
 
 h2 ~ p {
@@ -47,7 +47,7 @@ color : purple
 }
 
 
-3] this selector says that style the element of which is child of preceding element
+3] this selector says that style the element of which is direct child of preceding element. If li has contained another list then only li will et afftected not the inner list
 
 ul > li {
 	color: yellow;
@@ -70,7 +70,7 @@ ul li {
 h2[class=title] {
 
 	color : red;
-	
+
 }
 
 img[src="path"]{
