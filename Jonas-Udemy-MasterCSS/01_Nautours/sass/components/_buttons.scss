@@ -72,3 +72,34 @@
   }
 
 }
+
+.btn-text {
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-primary-light;
+    border-bottom: 0.2rem solid $color-primary-light;
+    padding: 0.5rem;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+    border: 0.2rem solid $color-primary-dark;
+    color: #fff;
+    transform: translateY(-0.5rem);
+    box-shadow: 0.2rem 0.5rem 2rem rgba($color-black,0.2)
+  }
+
+  &:active {
+    background-color: $color-primary-dark;
+    border: 0.2rem solid $color-primary-dark;
+    color: #fff;
+    transform: translateY(0.2rem);
+    box-shadow: 0.1rem 0.3rem 2rem rgba($color-black,0.2)
+  }
+
+}

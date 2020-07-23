@@ -1,0 +1,35 @@
+How to add background image to text or heading:
+
+1. create h2 content
+
+2. add "backround-image"
+
+3. For background-color use, "liner-gradient" property for background image
+
+4. since headings or paragraphs are block level element, background image will be applied for full width of parent. so set "display: property to "inline-block"
+
+5. set "-webkit-background-clip" property to set "text"
+
+6. Above property will clip the background-color or image behind the text but it wont will be visible since text is sittin on top of background-color or image.
+
+7. to make it visible, use "color: transparent" property so thet background will be visible.
+
+Syntax:
+
+		h2 {
+		
+		background-image: linear-gradient(to right, lihtgreen,dark green);
+		-webkit-background-clip: text;
+		color: transparent;
+		display: inline-block;
+		
+		}
+		
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+how to add outline to element:
+
+Syntax : outline : 1px solid red // will add red outline to the outside of elments
+
+		 outline-offset: 1px // will add offset bewtween outline and whole element box whereas in padding space between elemet and its box is added.
