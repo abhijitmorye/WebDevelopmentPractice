@@ -1,5 +1,7 @@
 How to add background image to text or heading:
 
+Ans:
+
 1. create h2 content
 
 2. add "backround-image"
@@ -30,6 +32,204 @@ Syntax:
 
 how to add outline to element:
 
+Ans:
+
 Syntax : outline : 1px solid red // will add red outline to the outside of elments
 
 		 outline-offset: 1px // will add offset bewtween outline and whole element box whereas in padding space between elemet and its box is added.
+		 
+		 
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+how to make div or box bend but inner contents should be at same position as before.
+
+Ans:
+
+here idea is to skew or rotate outer div vertically by small angle but its inside content should be at same position as before.
+
+1. We add transform: skew(some degreee) to parent div
+
+2. This will roatet div as well as its content by some angle.
+
+3. To restore content's position we have to skew it in opposite direction of parent's skew.
+
+
+Syntax:		div {
+					transform: skew(5deg);
+				}
+				
+			div > * {
+						transform: skew(-5deg);
+					}
+
+
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+How to rotate card or div on HTMl :
+
+
+suppose we have html : part1
+
+				<div class="card">
+					<div class="card__side">
+						
+					</div>
+				</div>
+				
+				
+Ans: we have to rotate the card by 180 deg.
+
+
+Syntax :
+
+		.card {
+		
+			percpective: 150rem // The perspective CSS property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective.
+			
+			
+		}
+		
+		.card_side {
+		
+			background-color:red;
+			transition: all 0.8s;
+			
+		}
+
+		
+		.cards:hover .cards_side { // this means that whenever outer card or div is hovered, rotate the inner card or div by 180 deg.
+		
+			transform: rotateY(180deg)l
+		
+		}
+		
+
+now we have added percepctive to out card but till this point we cant see two different color of card if they rotate
+
+html part2 :
+
+
+			<div class="card">
+					<div class="card__side card__side--front">
+						front
+					</div>
+					<div class="card__side card__side--back">
+						Back
+					</div>
+			</div>
+			
+At this point, now we have 2 card/div on top of each other. here idea is when front card/div is visible, back card/div is rotated 180 deg back i.e. not visible.
+
+
+	Syntax :	
+	
+		
+		.card {
+		
+			percpective: 150rem // The perspective CSS property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective.
+			
+			
+		}
+		
+		.card_side {
+		
+			background-color:red;
+			transition: all 0.8s;
+			
+		}
+		
+		.card_side--front { // this one is on front so no transform is applied
+		
+			background-color:red;
+			
+		}
+		
+		.card_side--back { // this one is on back so  transform is applied
+		
+			background-color:red;
+			transform: rotate(180deg); // already 180 deg rotated
+			
+		}
+
+		
+		.cards:hover .cards_side { // this means that whenever outer card or div is hovered, rotate the inner cards i.e (front and back) or div by 180 deg.
+		
+			transform: rotateY(180deg)l
+		
+		}
+		
+
+At this point, we have two cards ready that will be moved forth and back according when we hover over the card(main-div). But they will be positioned one down another not will be stacked.
+To give the stack effect, we need to apply "position:absolute" to front and back card and  "position:relative" to the main card or parent card.
+
+	
+	Syntax:
+	
+	
+		.card {
+		
+			percpective: 150rem // The perspective CSS property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective.
+			position: relative;
+			height: 50rem; // since due to relative positioning, this parent will loose its height, we have to give same height as child to this div so that it will gain its original position.
+			
+		}
+		
+		.card_side {
+		
+			background-color:red;
+			height: 50rem
+			transition: all 0.8s;
+			position: absolute;
+			width: 100%; //will aquire total postion of parent card.
+			backface-visibility: hidden; // this property will hide the back card.
+			
+		}
+		
+		.card_side--front { // this one is on front so no transform is applied
+		
+			background-color:red;
+			
+		}
+		
+		.card_side--back { // this one is on back so  transform is applied
+		
+			background-color:red;
+			transform: rotate(180deg); // already 180 deg rotated
+			
+		}
+
+		
+		.cards:hover .cards_side { // this means that whenever outer card or div is hovered, rotate the inner cards i.e (front and back) or div by 180 deg.
+		
+			transform: rotateY(180deg)l
+		
+		}
+	
+	
+	
+		
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+Q: whenever we apply width to break long heading in 2 part and then add padding to it, the right space in first break and left space in 2nd break are not equal when we break heading? 
+how to fix that?
+
+
+Ans:
+
+	syntax:
+	
+	<h2> The Amazing Spiderman </h2>
+	
+	
+	h2 {
+	
+		width: 50%; // this will break heading in two boxes.
+		padding: 1rem 2rem ; // this padding wont be consistent in both break box as it will consider the both boxes as single heading or line
+		box-decoration-break: clone; // this will give you same padding to both boxes.
+	
+	}
