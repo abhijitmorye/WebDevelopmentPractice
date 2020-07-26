@@ -1,0 +1,69 @@
+.cards {
+  perspective: 150rem;
+  color: black;
+  position: relative;
+  height: 48rem;
+
+  &__side {
+    height: 48rem;
+    transition: all 0.4s ease-out;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.2rem 2rem rgba($color-black, 0.2);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      background-image: linear-gradient(to right,rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4));
+      transform: rotateY(180deg);
+
+      &__title {
+        color: $color-white;
+        margin: 15rem auto;
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  &__pictures {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40%;
+    -webkit-clip-path: polygon(0 0,100% 0,100% 95%,0 100%);
+    clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4)),url('../images/cards-latte.jpg');
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4)),url('../images/cards-iced-tea.jpg');
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4)),url('../images/cards-espresso.jpg');
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 40%;
+    color: $color-white;
+  }
+}

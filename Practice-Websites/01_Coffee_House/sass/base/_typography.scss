@@ -6,13 +6,36 @@ body {
   color: $color_text_primary;
 }
 
-.header-section__intro {
+.heading-primary {
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: 2rem;
   text-transform: uppercase;
+}
 
+.heading-secondary {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+}
+
+.heading-tertiary {
+  color: $color_text_secondary;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragrapg {
+  color: $color_text_secondary;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.header-section__intro {
   &__title {
-    font-size: 7rem;
-    font-weight: 700;
-    letter-spacing: 2rem;
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out;
@@ -39,17 +62,54 @@ body {
   }
 }
 
-.section-about__title {
-  background-image: linear-gradient(to right,rgba($color_primary_light,0.8),rgba($color_primary_dark,0.8));
-  display: inline-block;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 4rem;
-  font-weight: 700;
-  text-shadow: 0.1rem 0.5rem 2rem rgba($color-black,0.2);
-  transition: transform 0.2s ease-out;
+.section-about {
+  &__title {
+    background-image: linear-gradient(to right,rgba($color_primary_light,0.8),rgba($color_primary_dark,0.8));
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0.5rem 2rem rgba($color-black,0.2);
+    transition: transform 0.2s ease-out;
 
-  &:hover {
-    transform: skewY(6deg) skewX(6deg) scale(1.1);
+    &:hover {
+      @include heading-skew;
+    }
+  }
+
+  &__subtitle {
+    text-align: left;
+  }
+
+  &__info {
+    text-align: left;
+  }
+}
+
+.section-feature {
+  text-align: center;
+  text-shadow: 0 0.5rem 2rem rgba($color-black,0.2);
+
+  &__title {
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      @include heading-skew;
+    }
+  }
+}
+
+.section-items {
+
+  &__title {
+    background-image: linear-gradient(to right,rgba($color_primary_light,0.8),rgba($color_primary_dark,0.8));
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0.5rem 2rem rgba($color-black,0.2);
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      @include heading-skew;
+    }
   }
 }

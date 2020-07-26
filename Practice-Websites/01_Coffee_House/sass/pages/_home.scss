@@ -1,5 +1,23 @@
 .section-about {
-  background-color: $div-color;
+  padding: 20rem;
+  margin-top: -10rem;
+  text-align: center;
+}
+
+.section-feature {
+  padding: 17rem;
+  background-image: linear-gradient(to right bottom, rgba($color_primary_light,0.2),rgba($color_primary_dark,0.2)),url('../images/bg-desktop-header_2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -12rem;
+  transform: skewY(-5deg);
+
+  & > * {
+    transform: skewY(5deg);
+  }
+}
+
+.section-items {
   padding: 20rem;
   margin-top: -10rem;
   text-align: center;

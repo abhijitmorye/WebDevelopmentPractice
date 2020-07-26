@@ -4,20 +4,24 @@ $color_primary: #f09e0e;
 
 
 //typography color
-
 $color_text_primary: #eee;
+$color_text_secondary: #8e8b82;
 
 
-// shadow color or black color
-
+// shadow color or black color white
 $color-black: #000;
+$color-white: #fff;
 
 
 //grid vertical and horizontal space
+$grid-vertical: 4rem;
+$grid-horizontal: 4rem;
 
-$grid-vertical : 4rem;
-$grid-horizontal: 2rem;
 
 // div background color
+$div-color: #e6e7e8;
 
-$div-color: #f0ece3;
+
+//cards gradient $color_text_secondary
+$cards-gradient-color-light: #e6a157;
+$cards-gradient-color-dark: #eb8242;

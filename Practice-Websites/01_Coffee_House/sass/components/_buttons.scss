@@ -49,3 +49,41 @@
     transition: all 0.4s ease-out;
   }
 }
+
+.about-button {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color_primary_light,$color_primary);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 1rem;
+    border-bottom: 1px solid $color_primary;
+    transition: all 0.2s ease-out;
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.2rem 2rem rgba($color-black,0.2);
+  }
+
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.1rem 1.5rem rgba($color-black,0.2);
+  }
+}
+
+.btn-cards {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    color: $color-white;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid $cards-gradient-color-light;
+    transition: all 0.2s ease-out;
+  }
+}

@@ -1,18 +1,13 @@
 .row {
-
-  background-color: $color-text-primary;
   max-width: 110rem;
   margin: 0 auto;
 
   &:not(:last-child) {
     margin-bottom: $grid-vertical;
   }
-
   @include clearfix;
 
   [class^="col-"] {
-
-    background: red;
     float: left;
 
     &:not(:last-child) {
