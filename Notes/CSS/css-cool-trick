@@ -103,7 +103,7 @@ Syntax :
 		
 		.cards:hover .cards_side { // this means that whenever outer card or div is hovered, rotate the inner card or div by 180 deg.
 		
-			transform: rotateY(180deg)l
+			transform: rotateY(180deg);
 		
 		}
 		
@@ -406,4 +406,97 @@ how to add cool effect of expanding shadow of button when hover.
 		
 
 		
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+How to blur image ?
+
+Syntax : 
+
+			<div>
+				<img src="path" class="image">
+			</div>
+			
+			
+			.image {
+			
+				filter: blur(3px) brightness(80%) // filter property has diiferent values, we can specify blur,opacity,brightness to modify the image.
+			}
+			
+
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+How to rotate text around image or box in circle or shape of div?
+suppose we have div width circle shape then we need to align text around it accordingly.
+
+syntax:		
+
+		<div class="shape-circle">
 		
+		</div>
+		
+		<div class="textbox">
+			<h1>This is text that will be floated around the text</h1>
+		</div>
+		
+		
+		.shape-circle {
+		
+		height: 15rem;
+		width: 15rem;
+		float:left; // will float the div or img to the left and text to the right but the text will not be properly aligned with shape of div.
+		-webkit-clip-path: circle(50% at 50% 50%) // 1st 50% defines the radius of circle, here 50% of height and width of div. so 50% of 15rem = 7.5rem will be radius and thus creating circle that has diameter of 17rem and touching the sides of div. 
+		-shape-outside: circle(50% at 50% 50%) // this specifie how the text will be aligned according the shape of div.
+
+		
+Note: shape-outside property requires to have height,width and float property to be defied to element to which shape-outside property is applied.
+		
+		
+		}
+		
+		
+	
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+How to add video in html.
+
+
+Syntax : 	muted will mute the video, autoplay will autoplay the video whenever site get loaded,and loop will continuosly loop the video.
+
+		<video alt="" muted autoplay loop>
+			<source src="path" alt=""></source>
+			<source src="path1" alt=""></source>
+		</video>
+		
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+solid gradient color: how to make half background visible while half background image will be filled up by color 
+
+1: will be white color
+
+2: will be background-image
+ _____________________
+|1           /2       |   
+|           /         |
+|          /          |
+|         /           |
+|________/____________|
+
+
+Syntax:
+
+		<div class="row">
+
+		</div>
+		
+		
+		.row {
+			background-image: linear-gradient(105deg,                    // 105deg will crate slanting effect that we have at midpoint.
+											  rgba(color-white,0.9) 0%,  //this will place the white color at starting position 
+											  rgba(color-white,0.9) 50%, // this will place white color at 50% of total row
+											  transparent 50%)			 // this will place transparent color(valid color in html) at the 50% of total row. 
+											  ,url('path to the bg-image');
+			background-size: cover;
+		}

@@ -27,7 +27,31 @@ Psuedo-classes:
 		}
 		
 		so red background color will be applied to all list item except last child.
+		
+		
+	
 
+
+2.  :focus classes : we can style the button or input firld in form using this property whenever they are focused or clicked on.
+
+			Syntax :  
+			
+						form:focus {
+							border: 3px solid green;
+						}
+						
+						
+						
+3.  :invalid class : we can specify the style for input field till user fill the correct info in input field like, we will make border of input box in form red till user types in correct email id.
+
+
+			Syntax:
+			
+					form:focus:invalid {  
+					
+						border: 3px solid red;
+					
+					}
 
 
 ---------------------------------------------------------------------------------*******************-------------------------------------------------------------
@@ -68,4 +92,30 @@ Psuedo elements :
 		 
 	
 	------------------------------------------
+	
+	
+2)  ::-webkit-input-placeholder :
+
+we can style the placeholder such as its color,font-size etc using this property
+
+
+		syntax:
+		
+				form::-webkit-input-placeholder {
+												color: $color-form-text;
+											}
+											
+								
+3) :placeholder-shown : 
+
+so using this property, we can actually style the properties of an element if user has not type anything and only placeholder is shown
+
+
+		syntax:
+		
+				form:placeholder-shown {
+												color: red; // we can shown the color of placeholder
+											}
+
+
 	
