@@ -463,6 +463,66 @@ body {
     transform: translateX(-4rem) scale(1);
     filter: blur(0.3rem) brightness(80%); }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s; }
+  .popup__content {
+    width: 80%;
+    margin: 10rem auto;
+    background-color: #ffffff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+    display: table;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.25);
+    transition: all 0.4s 0.2s; }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 4rem;
+    position: relative; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #f7f7f7;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: scale(1); }
+  .popup__close:link, .popup__close:visited {
+    font-size: 3rem;
+    color: #333;
+    line-height: 1;
+    text-decoration: none;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    transition: all 0.2s; }
+  .popup__close:hover {
+    color: #55c57a; }
+
 .header-box {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");

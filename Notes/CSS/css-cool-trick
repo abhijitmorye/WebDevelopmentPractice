@@ -500,3 +500,57 @@ Syntax:
 											  ,url('path to the bg-image');
 			background-size: cover;
 		}
+		
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+How to make 2 div visible side by side using "display:table-cell" property
+
+Ans :
+
+	syntax : 
+	
+			<div class="Parent">
+				<div class="child-1"></div>
+				<div class="child-2"></div>
+			</div>
+			
+	
+			.parent {
+			
+				display: table;
+			
+			}
+			
+			.child-1 {
+			
+				display: table-cell;
+			}
+			
+			.child-2 {
+			
+				display: table-cell;
+			}
+			
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+How to make text to appear in multiple columns with same width and height
+
+Ans :
+
+		syntax:
+		
+				<p class="textarea">				
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nesciunt error reprehenderit sequi qui cumque atque animi natus consequuntur aliquid mollitia amet distinctio voluptatem aspernatur, tenetur sapiente incidunt alias doloremque.
+				</p>
+				
+				
+				.textarea {
+				
+					column-count: 3; // 3 columns will be generated
+					column-gap: 4rem; // gap between two adjacent column
+					column-rule: 1 px solid red; // border between two columns
+					hyphens: auto // adds hyphens between 1 single word which is broken in 2 pieces and place on another line. to make work add lang="en" as attribute to html tag.
+				
+				}
