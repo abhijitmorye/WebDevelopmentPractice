@@ -19,11 +19,10 @@
     }
 
     &--back {
-      background-image: linear-gradient(to right,rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4));
       transform: rotateY(180deg);
 
       &__title {
-        color: $color-white;
+        color: $cards-gradient-color-dark;
         margin: 15rem auto;
         font-size: 4rem;
       }
