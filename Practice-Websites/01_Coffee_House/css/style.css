@@ -135,11 +135,17 @@ body {
 .u-margin-large {
   margin-bottom: 6rem; }
 
+.u-margin-large-8 {
+  margin-bottom: 8rem !important; }
+
 .u-margin-button {
   margin-top: 2rem; }
 
 .u-text-align-left {
   text-align: left; }
+
+.u-text-align-center {
+  text-align: center; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -314,6 +320,59 @@ body {
   .feature-box:hover {
     transform: translateY(-2rem); }
 
+.stories {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.4);
+  padding: 7rem;
+  overflow: hidden;
+  transform: skewX(-12deg);
+  background-color: rgba(255, 255, 255, 0.6); }
+  .stories__shape {
+    height: 15rem;
+    width: 15rem;
+    float: left;
+    position: relative;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    transform: skewX(12deg) translateX(-2rem);
+    position: relative; }
+  .stories__image {
+    height: 100%;
+    transform: scale(1.4);
+    transition: all 0.4s; }
+  .stories__text {
+    transform: skewX(12deg); }
+  .stories__caption {
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.4s; }
+  .stories:hover .stories__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .stories:hover .stories__image {
+    transform: scale(1.1);
+    filter: blur(0.2rem) brightness(70%); }
+
+.bg-video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5; }
+  .bg-video__content {
+    object-fit: cover;
+    height: 100%; }
+
 .row {
   max-width: 110rem;
   margin: 0 auto; }
@@ -387,3 +446,8 @@ body {
   padding: 20rem;
   margin-top: -10rem;
   text-align: center; }
+
+.section-stories {
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden; }
