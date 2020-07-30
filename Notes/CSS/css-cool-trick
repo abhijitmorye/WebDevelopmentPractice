@@ -554,3 +554,123 @@ Ans :
 					hyphens: auto // adds hyphens between 1 single word which is broken in 2 pieces and place on another line. to make work add lang="en" as attribute to html tag.
 				
 				}
+				
+				
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+how to unfocus black border for input field in form?
+
+
+Ans :
+	
+		Syntax :
+				
+					<input type="text" placeholder="Enter Name" class="input__type">
+					
+					
+					.input__type:focus {
+					
+						outline: none; // this will remove black border whenever you click on text field.
+						
+
+					}
+					
+					
+					
+					
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+We can color the placeholder of input field with below psuedo classess.
+
+
+Ans:
+
+		Syntax :
+		
+					<input type="text" placeholder="Enter Name" class="input__type">
+					
+					
+					.input__type::-webkit-input-placeholder {
+					
+						outline: none; // this will remove black border whenever you click on text field.
+						
+
+					}
+					
+					
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+We can style the color, border, animation etc of an input field in form till user enters the first letter in the input box using below syntax?
+
+
+Ans :
+
+		Syntax :
+		
+					<input type="text" placeholder="Enter Name" class="input__type" id="name">
+					<label for="name" class="input__label">Full Name</label>
+					
+					
+					.input__type:placeholder-shown + input__label {
+					
+						color: red
+					
+					}
+					
+			
+		Here in above example, we have given color red to label whenever user enters the first letter in the inpit box till the color of label will be default.
+		
+		
+	
+similarly: 	untill user enters the valid input in the box, we can decide which style to show.
+
+
+        Syntax :
+		
+					<input type="text" placeholder="Enter Name" class="input__type" id="name">
+					<label for="name" class="input__label">Full Name</label>
+					
+					
+				1. show red placeholder whenever user click on input box and start typing the input till correct input. like entering @ symbol in email box
+					.input__type:focus:invalid {  
+					
+						color: red
+					
+					}
+					
+				2. make input color green whenever user enters the valid input.
+					
+					.input__type:focus {
+					
+						color: green
+					
+					}
+	
+
+
+		
+		
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+We can style the element based on radio or checbox is checked or not using psuedo class ":checked"	
+
+
+Ans :
+
+		Syntax:
+		
+					<input type="radio" name="name" id="radio1" class="radio-input">
+					<label for="radio1" class="radio__label">Male</label>
+					<input type="radio" name="name" id="radio2" class="radio-input">
+					<label for="radio2" class="radio__label">Female</label>
+					
+					
+					.radio-input:checked + .radio-label {
+					
+						color: red;
+					
+					}
+					
+					
+		Here , we have made color of radio label red whenever user clicks on radio button otherwise it will be default.

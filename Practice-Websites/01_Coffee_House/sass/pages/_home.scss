@@ -28,3 +28,8 @@
   position: relative;
   overflow: hidden;
 }
+
+.section-booking {
+  padding: 10rem 0;
+  background-image: linear-gradient(to right bottom, rgba($color_primary_light,0.2),rgba($color_primary_dark,0.2));
+}

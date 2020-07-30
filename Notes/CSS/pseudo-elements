@@ -105,6 +105,11 @@ we can style the placeholder such as its color,font-size etc using this property
 												color: $color-form-text;
 											}
 											
+									
+	
+	------------------------------------------
+	
+											
 								
 3) :placeholder-shown : 
 
@@ -116,6 +121,34 @@ so using this property, we can actually style the properties of an element if us
 				form:placeholder-shown {
 												color: red; // we can shown the color of placeholder
 											}
+											
+											
+						
+
+	------------------------------------------
+	
+
+4) We can style the element based on radio or checbox is checked or not using psuedo class ":checked"	
+
+
+Ans :
+
+		Syntax:
+		
+					<input type="radio" name="name" id="radio1" class="radio-input">
+					<label for="radio1" class="radio__label">Male</label>
+					<input type="radio" name="name" id="radio2" class="radio-input">
+					<label for="radio2" class="radio__label">Female</label>
+					
+					
+					.radio-input:checked + .radio-label {
+					
+						color: red;
+					
+					}
+					
+					
+		Here , we have made color of radio label red whenever user clicks on radio button otherwise it will be default.
 
 
 	
