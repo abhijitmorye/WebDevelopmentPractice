@@ -12,6 +12,30 @@
 
 <body>
 
+
+  <div class="navigation">
+  <input type="checkbox" class="navigation__checbox-input" id="toggle">
+  <label for="toggle" class="navigation__checkbox-label">
+    <span class="navigation__checkbox-button">
+      &nbsp;
+    </span>
+  </label>
+
+  <div class="navigation__background">
+    &nbsp;
+  </div>
+
+  <div class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item"><a href="#" class="navigation__link">About Brew Cafe</a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link">Cafe Features</a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link">Order Cafe Menu</a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link">Book a table</a></li>
+    </ul>
+  </div>
+  </div>
+
   <header class="header-section">
     <div class="header-section__logobox">
       <img src="images/logo/logo_transparent.png" alt="Logo" class="header-section__logobox__logo">
@@ -87,7 +111,7 @@
     </div>
   </section>
 
-  <div class="section-items">
+  <div class="section-items" id="menu">
     <div class="u-margin-large">
       <h2 class="heading-secondary section-items__title">
         Popular Items
@@ -110,7 +134,7 @@
             <h3 class="heading-tertiary cards__side--back__title">
               &#x20B9; 450
             </h3>
-            <a href="#" class="btn btn-cards">Order Now</a>
+            <a href="#popup" class="btn btn-cards">Order Now</a>
           </div>
         </div>
       </div>
@@ -129,7 +153,7 @@
             <h3 class="heading-tertiary cards__side--back__title">
               &#x20B9; 375
             </h3>
-            <a href="#" class="btn btn-cards">Order Now</a>
+            <a href="#popup" class="btn btn-cards">Order Now</a>
           </div>
         </div>
       </div>
@@ -148,7 +172,7 @@
             <h3 class="heading-tertiary cards__side--back__title">
               &#x20B9; 555
             </h3>
-            <a href="#" class="btn btn-cards">Order Now</a>
+            <a href="#popup" class="btn btn-cards">Order Now</a>
             </back>
           </div>
         </div>
@@ -256,7 +280,6 @@
                 </label>
               </div>
             </div>
-
             <div class="form__group u-margin-top-medium">
               <a href="#" class="btn btn--header">Next Step &rarr;</a>
             </div>
@@ -265,6 +288,56 @@
       </div>
     </div>
   </section>
+
+
+  <footer class="footer">
+    <div class="footer__logo-box">
+      <img src="images/logo/logo_transparent.png" alt="footer_logo" class="footer__logo">
+    </div>
+    <div class="row">
+      <div class="col-1-of-2">
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-1-of-2">
+        <div class="footer__copyright-box">
+          <p class="footer__copyright-text">
+            This site template is made and maintained by <a href="www.linkedin.com/in/abhijit-morye-a80440a3" class="footer__link">Abhijit Morye</a>.
+            This site template is practice vesrion of udemy course provided by Jonas. You can use this site if you want and grow your business.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <div class="popup__img-box">
+        <img src="images/cards-iced-tea.jpg" alt="" class="popup__img">
+        <img src="images/cards-espresso.jpg" alt="" class="popup__img">
+      </div>
+      <div class="popup__text-box">
+        <a href="#menu" class="popup__close">&times;</a>
+        <h2 class="heading-secondary section-items__title u-margin-medium">
+          Order Now
+        </h2>
+        <h3 class="heading-tertiary u-margin-small">
+          important- please read terms and conditions before ordering.
+        </h3>
+        <p class="popup__text u-margin-medium">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam assumenda eos harum deserunt veniam suscipit, impedit ipsa doloremque optio ad repudiandae asperiores laudantium enim itaque! Doloribus praesentium, voluptatem ipsa perferendis similique libero ea molestiae facere quas id labore adipisci aperiam natus consequuntur enim, culpa harum eos dignissimos fugit debitis earum.
+        </p>
+        <a href="#" class="btn btn--header">Order Now</a>
+      </div>
+    </div>
+  </div>
 
   <!-- grid section
 

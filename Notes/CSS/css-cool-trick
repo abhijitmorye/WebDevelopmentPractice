@@ -674,3 +674,103 @@ Ans :
 					
 					
 		Here , we have made color of radio label red whenever user clicks on radio button otherwise it will be default.
+
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+Checkbox-hack:
+
+How to create cross button functionality in html?
+
+
+Ans :
+
+
+		Syntax :
+		
+					
+				<input type="checkbox" id="toggle" class="checkbox-input">
+				<label name="toggle" class="checkbox-label"> 				
+				<span class="checkbox-button"></span>
+				</label>
+				
+				
+				
+				
+				.checkbox-input {
+				
+				
+				}
+				
+				
+				.checkbox-label {
+				
+					height: 6rem;
+					width:6rem;
+					background-color: red;
+					border-radius: 50%;
+					position: fixed;  // keep parent element position as relative
+					top: 6rem;
+					right: 6rem;
+					z-index: 2000; // keep button on top of other elements on html
+					text-align: center;
+				
+				}
+				
+				.checkbox-button {
+				
+					margin-top: 3rem;
+					position: relative;
+				
+				
+					&,
+					&::before,
+					&::after {
+					
+						height: 2px;
+						width: 3rem;
+						background-color: white;						
+					
+					}
+					
+					&::before,
+					&::after {
+					
+						position: absolute;
+						left: 0;
+					
+					}
+					
+					&::before {
+					
+						top: -1rem
+					}
+					
+					&::after {
+					
+						top: -1rem
+					}
+				
+				
+				}
+				
+				
+				checkbox-input:checked + checkbox-label > checbox-button {
+				
+					background-color: transparent;
+				}
+				
+				checkbox-input:checked + checkbox-label > checbox-button::before {
+				
+					transform: rotate(135deg);
+					top: 0;
+					
+				}
+				
+				checkbox-input:checked + checkbox-label > checbox-button::after {
+				
+					transform: rotate(-135deg);
+					top: 0;
+					
+				}
