@@ -152,3 +152,12 @@ Ans :
 
 
 	
+5) We can change the style of the selected text by using "::selection" element
+
+
+::selection {
+
+	background-color: red;
+	color: white;
+
+}

@@ -130,6 +130,92 @@ suppose we have mixin as follows :
 		@inculde text-color-change($button-text-color)
 		}
 
+We can pass the piece of code in mixin using "@content" directives
+
+
+		@mixin mixin_name {
+		
+		
+		  @media (max-width: 600px) {
+		  
+			@content
+		  
+		  };		
+			
+		
+		}
+		
+		
+and write content in specified element style.
+
+
+		html { // class name or id name 
+		
+			font-size: 65%;
+		
+			@include mixin_name {
+			
+				font-size: 50%
+			
+			}
+		}
+
+here content i.e. (font-size: 50%) will be paste into mixin in place of @content and then entire mixin will be paste into element
+
+final code will be
+
+		html {
+		
+			font-size: 60%;
+			
+			@media (max-width: 600px) {
+			
+				font-size: 50%;
+			
+			}
+		
+		}
+		
+		
+Writing media queries using @if and @content directives.
+
+
+		mixin syntax :
+		
+						@mixin mixin_name($variable) {
+						
+							@if($variable == value ) {
+							
+								@media (min-width: 600px) {
+									
+									@content
+								
+								}
+							
+							}
+						
+						}
+
+
+
+						html {
+						
+							@include mixin_name(variable_value) {
+							
+							
+									font-size: 60px;
+									width: 80%;
+									color: blue;
+							
+							}
+						
+						}
+						
+						
+
+Here in mixin part, e are passing an argument($variable) which will be compared with value (if $variable == phone) and specific media query will be applied.
+
+		
 
 Functions :
 
@@ -254,3 +340,35 @@ SASS floder structure :
 	
 
 
+
+
+/* Package.json
+
+
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:sass": "concat -o css/style.concat.css css/fonts.css css/style.comp.css",
+    "prefix:sass": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
+    "compress:sass": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:sass": "npm-run-all compile:sass concat:sass prefix:sass compress:sass"
+  },
+  "author": "Abhijit Morye",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1"
+  }
+}
+
+
+
+*/

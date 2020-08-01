@@ -1,0 +1,67 @@
+Responsive Images IN HTML:
+
+Providing image based on the devices.
+
+
+	Density switching:
+		
+		Providing larger images for higher reolution screen and smaller images for lower resolution screen.
+		
+		specify the "srcset" attribute in <img> tag
+		
+		<img srcset= lower_img_path 1x higher_img_path 2x>
+		
+		1x for lower resolution screen
+		2x for higher resolution screen.
+		
+		
+		
+	Art direction :
+	
+		Providing the images based on the width of devices.
+		
+		In below example, provide image from <source> tag if screen width is equal to or less that 600px otherwise use images from <img> tag
+		
+		
+		<picture class="footer__logo">
+            <source srcset="img/logo-green-small-1x.png 1x,img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="" class="footer__logo">
+        </picture>
+		
+		
+	Resolution switching :
+	
+		providing the best image based on the current viewport and display resolution.
+		
+		
+		<img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"                 //specifying the image and its original width using width descriptor(300w)
+                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 29vw, 300px"    // specifying "sizes" the condition and then width of image to be shown when condtion is satisfied
+                 alt="image"
+                 class="composition__photo composition__photo--p1">
+				 
+				 
+				 
+Responsive Images IN CSS:
+
+
+	.img {
+	
+		background-image: url('img-small');
+	
+	}
+	
+	@media (min-resolution: 192dpi) {
+	
+		background-image: url('img-large');
+	
+	}
+	
+	
+	another example:
+	
+		@media (min-resolution: 192dpi) and (min-width: 37.5em),(-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),(min-width: 112.5em){
+
+      background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)),url('../img/hero.jpg');
+      }
+	  
+-webkit-min-device-pixel-ratio: 2 // for safari

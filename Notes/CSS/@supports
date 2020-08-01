@@ -1,0 +1,26 @@
+@supports query:
+
+we can test modern css style on different broweser but if certain browser doesnt support such css styles like internet explorer or edge. We can specify the ondition such that if particular browser supports the css style then appy that style on that browser otherwise apply normal style.
+
+
+	syntax:
+	
+			.popup {
+					height: 100vh;
+					width: 100%;
+					background-color: rgba($color-grey-dark,0.9);
+					position: fixed;
+					top: 0;
+					left: 0;
+					z-index: 25000;
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.4s;
+					
+					
+					  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px) )  {
+
+									-webkit-backdrop-filter: blur(10px);
+									backdrop-filter: blur(10px);
+									background-color: rgba($color-grey-dark,0.3);
+								}

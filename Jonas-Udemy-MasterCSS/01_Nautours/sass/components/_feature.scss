@@ -8,14 +8,24 @@
   box-shadow: 1rem 2rem 20rem rgba($color-black, 0.4);
   transition: transform 0.2s;
 
+  @include respond(tab-port) {
+    padding: 1.5rem;
+  }
+
   &__icon {
 
     font-size: 6rem;
     margin-bottom: 0.3rem;
-    background-image: linear-gradient(to right, rgba($color-primary-light, 1),rgba($color-primary-dark,1));
-    -webkit-background-clip: text;
-    color: transparent;
+    color: $color-grey-dark;
     display: inline-block;
+
+    @supports (background-clip: text)  or (-webkit-background-clip: text) {
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(to right, rgba($color-primary-light, 1),rgba($color-primary-dark,1));
+      color: transparent;
+    }
+
 
   }
 
