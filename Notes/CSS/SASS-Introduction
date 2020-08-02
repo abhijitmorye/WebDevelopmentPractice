@@ -372,3 +372,12 @@ SASS floder structure :
 
 
 */
+
+
+Packegs to download (add --save-dev to include it in dev dependency)
+
+npm install npm-sass -- compilation and compression
+npm install concat  -- concatination
+npm install autoprefixer -- prefixer
+npm install postcss-cli  -- for autoprefixer
+npm install npm-run-all  -- for building process

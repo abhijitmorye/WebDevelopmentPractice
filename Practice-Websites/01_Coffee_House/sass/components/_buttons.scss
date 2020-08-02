@@ -75,17 +75,16 @@
   }
 }
 
-.btn-cards {
+.btn--white {
   &:link,
   &:visited {
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
-    color: $color-white;
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid $cards-gradient-color-light;
     transition: all 0.2s ease-out;
-    background-image: linear-gradient(to right,rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4));
+    background-color: $color_white;
+    color: $color_primary;
   }
 
     &::after {
@@ -99,7 +98,8 @@
       border-radius: 10rem;
       z-index: -1;
       transition: all 0.4s ease-out;
-      background-image: linear-gradient(to right,rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4));
+      background-color: $color_white;
+      color: $color_primary;
 
     }
 

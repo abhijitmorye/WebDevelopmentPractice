@@ -1,31 +1,27 @@
 .cards {
-  perspective: 150rem;
-  color: black;
-  position: relative;
   height: 48rem;
+  position: relative;
+  perspective: 150rem;
 
   &__side {
     height: 48rem;
-    transition: all 0.4s ease-out;
     position: absolute;
-    top: 0;
-    width: 100%;
+    color: white;
     backface-visibility: hidden;
+    width: 100%;
+    transition: all 1s ease-out;
+    top: 0;
     border-radius: 0.3rem;
-    box-shadow: 0 0.2rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0rem 1rem 2rem rgba($color-black,0.4);
+
 
     &--front {
-      background-color: $color-white;
+
     }
 
     &--back {
+      background-image: linear-gradient(to right bottom, $color-primary-light,$color_primary_dark);
       transform: rotateY(180deg);
-
-      &__title {
-        color: $cards-gradient-color-dark;
-        margin: 15rem auto;
-        font-size: 4rem;
-      }
     }
   }
 
@@ -37,32 +33,141 @@
     transform: rotateY(0deg);
   }
 
-  &__pictures {
+  &__picture {
+    height: 23rem;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 40%;
-    -webkit-clip-path: polygon(0 0,100% 0,100% 95%,0 100%);
-    clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+    border-top-left-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+
+    @supports (-webkit-clip-path: polygon(0 0, 0 100%, 100% 85%, 0 100%)) or (clip-path: polygon(0 0, 0 100%, 100% 85%, 0 100%)) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      background-blend-mode: screen;
+
+    }
 
     &--1 {
-      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4)),url('../images/cards-latte.jpg');
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.6),rgba($cards-gradient-color-dark,0.6)),url('../images/cards-cuppcinno-small.jpg');
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+      (min-width: 125em)
+      {
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.6),rgba($cards-gradient-color-dark,0.6)),url('../images/cards-cuppcinno.jpg');
+      }
     }
 
     &--2 {
-      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4)),url('../images/cards-iced-tea.jpg');
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.6),rgba($cards-gradient-color-dark,0.6)),url('../images/cards-iced-tea-small.jpg');
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+      (min-width: 125em)
+      {
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.6),rgba($cards-gradient-color-dark,0.6)),url('../images/cards-iced-tea.jpg');
+      }
     }
 
     &--3 {
-      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.4),rgba($cards-gradient-color-dark,0.4)),url('../images/cards-espresso.jpg');
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.6),rgba($cards-gradient-color-dark,0.6)),url('../images/cards-espresso-small.jpg');
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+      (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+      (min-width: 125em)
+      {
+      background-image: linear-gradient(to right bottom, rgba($cards-gradient-color-light,0.6),rgba($cards-gradient-color-dark,0.6)),url('../images/cards-espresso.jpg');
+      }
     }
   }
 
-  &__title {
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    width: 80%;
     position: absolute;
-    top: 12rem;
-    right: 2rem;
-    width: 40%;
-    color: $color-white;
+    top: 16rem;
+    right: 0rem;
+    color: $color_white;
+    text-align: center;
+    background-color: $color_primary;
+    padding: 1rem 1.3rem;
   }
+
+  &__details {
+    padding: 5rem 3rem 3rem;
+    text-align: center;
+    color: $color-grey-dark;
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+
+  &__price-box {
+    margin-bottom: 10rem;
+    color: $color_white;
+  }
+
+  &__price-only {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  &__price-value {
+    font-size: 4rem;
+    font-weight: 100;
+  }
+}
+
+
+@include respond(tab-port) {
+
+  .cards {
+    height: auto;
+    box-shadow: 0rem 1rem 2rem rgba($color-black,0.4);
+    background-color: $color_white;
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        background-image: linear-gradient(to right bottom, $color-primary-light,$color_primary_dark);
+        transform: rotateY(0deg);
+
+        @supports (-webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%)) or (clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%)) {
+          -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+      &__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        text-align: center;
+        padding: 5rem 3rem 3rem;
+      }
+
+      &__price-box {
+      margin-bottom: 4rem;
+
+    }
+
+  }
+
+
 }

@@ -1,19 +1,34 @@
 .section-about {
-  padding: 20rem;
+  padding: 20rem 0;
   margin-top: -10rem;
   text-align: center;
+
+  @include respond(tab-port) {
+    padding: 15rem 0;
+  }
 }
 
 .section-feature {
-  padding: 17rem;
-  background-image: linear-gradient(to right bottom, rgba($color_primary_light,0.2),rgba($color_primary_dark,0.2)),url('../images/bg-desktop-header_2.jpg');
+  padding: 17rem 0;
+  background-image: linear-gradient(to right bottom, rgba($color_primary_light,0.2),rgba($color_primary_dark,0.2)),url('../images/bg-desktop-header_2-small.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -12rem;
   transform: skewY(-5deg);
 
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+  (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+  (min-width: 125em)
+  {
+    background-image: linear-gradient(to right bottom, rgba($color_primary_light,0.2),rgba($color_primary_dark,0.2)),url('../images/bg-desktop-header_2.jpg');
+  }
+
   & > * {
     transform: skewY(5deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 12rem 0;
   }
 }
 
@@ -21,15 +36,27 @@
   padding: 20rem;
   margin-top: -10rem;
   text-align: center;
+
+  @include respond(tab-port) {
+    padding: 15rem 0;
+  }
 }
 
 .section-stories {
   padding: 10rem 0 0;
   position: relative;
   overflow: hidden;
+
+  @include respond(tab-port) {
+    padding: 8rem 0 0;
+  }
 }
 
 .section-booking {
   padding: 10rem 0;
   background-image: linear-gradient(to right bottom, rgba($color_primary_light,0.2),rgba($color_primary_dark,0.2));
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
 }

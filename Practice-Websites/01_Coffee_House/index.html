@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="shortcut icon" type="image/png" href="images/logo/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,9 +73,25 @@
       </div>
       <div class="col-1-of-2">
         <div class="composition">
-          <img src="images/exp-img-1.jpg" alt="" class="composition__photo composition__photo--1">
+
+          <img srcset="images/exp-img-1-small.jpg 864w, images/exp-img-1.jpg 1416w"
+               sizes="(max-width: 56.25em) 20vw,(max-width: 37.5em) 30vw, 18.75em" alt="photo-1"
+               class="composition__photo composition__photo--1"
+               src="images/exp-img-1.jpg">
+
+          <img srcset="images/exp-img-2-small.jpg 476w, images/exp-img-2.jpg 1368w"
+               sizes="(max-width: 56.25em) 20vw,(max-width: 37.5em) 30vw, 18.75em" alt="photo-2"
+               class="composition__photo composition__photo--2"
+               src="images/exp-img-2.jpg">
+
+          <img srcset="images/exp-img-3-small.jpg 560w, images/exp-img-3.jpg 1119w"
+               sizes="(max-width: 56.25em) 20vw,(max-width: 37.5em) 30vw, 18.75em" alt="photo-3"
+               class="composition__photo composition__photo--3"
+               src="images/exp-img-3.jpg">
+
+          <!-- <img src="images/exp-img-1.jpg" alt="" class="composition__photo composition__photo--1">
           <img src="images/exp-img-3.jpg" alt="" class="composition__photo composition__photo--2">
-          <img src="images/exp-img-2.jpg" alt="" class="composition__photo composition__photo--3">
+          <img src="images/exp-img-2.jpg" alt="" class="composition__photo composition__photo--3"> -->
         </div>
       </div>
     </div>
@@ -117,63 +134,94 @@
         Popular Items
       </h2>
     </div>
-
     <div class="row">
       <div class="col-1-of-3">
         <div class="cards">
           <div class="cards__side cards__side--front">
-            <div class="cards__pictures cards__pictures--1 u-margin-large">
+            <div class="cards__picture cards__picture--1">
               &nbsp;
             </div>
-            <h3 class="heading-tertiary cards__title">
-              cinnamilla Latte
-            </h3>
-            <p class="paragrapg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <h4 class="cards__heading">
+              <span class="cards__heading-span">
+                cuppcinno
+              </span>
+            </h4>
+            <div class="cards__details">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui numquam delectus aperiam, quasi nesciunt illum.</p>
+            </div>
           </div>
           <div class="cards__side cards__side--back">
-            <h3 class="heading-tertiary cards__side--back__title">
-              &#x20B9; 450
-            </h3>
-            <a href="#popup" class="btn btn-cards">Order Now</a>
+            <div class="cards__cta">
+              <div class="cards__price-box">
+                <p class="cards__price-only">
+                  only
+                </p>
+                <p class="cards__price-value">
+                  &#8377;495
+                </p>
+              </div>
+              <a href="#popup" class="btn btn--white">Order Now</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-1-of-3">
         <div class="cards">
           <div class="cards__side cards__side--front">
-            <div class="cards__pictures cards__pictures--2 u-margin-large">
+            <div class="cards__picture cards__picture--2">
               &nbsp;
             </div>
-            <h3 class="heading-tertiary cards__title">
-              choco iced tea
-            </h3>
-            <p class="paragrapg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <h4 class="cards__heading">
+              <span class="cards__heading-span">
+                Iced Tea
+              </span>
+            </h4>
+            <div class="cards__details">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui numquam delectus aperiam, quasi nesciunt illum.</p>
+            </div>
           </div>
           <div class="cards__side cards__side--back">
-            <h3 class="heading-tertiary cards__side--back__title">
-              &#x20B9; 375
-            </h3>
-            <a href="#popup" class="btn btn-cards">Order Now</a>
+            <div class="cards__cta">
+              <div class="cards__price-box">
+                <p class="cards__price-only">
+                  only
+                </p>
+                <p class="cards__price-value">
+                  &#8377;375
+                </p>
+              </div>
+              <a href="#popup" class="btn btn--white">Order Now</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-1-of-3">
         <div class="cards">
           <div class="cards__side cards__side--front">
-            <div class="cards__pictures cards__pictures--3 u-margin-large">
+            <div class="cards__picture cards__picture--3">
               &nbsp;
             </div>
-            <h3 class="heading-tertiary cards__title">
-              Espresso Shots
-            </h3>
-            <p class="paragrapg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <h4 class="cards__heading">
+              <span class="cards__heading-span">
+                Espresso shots
+              </span>
+            </h4>
+            <div class="cards__details">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui numquam delectus aperiam, quasi nesciunt illum.</p>
+            </div>
           </div>
           <div class="cards__side cards__side--back">
-            <h3 class="heading-tertiary cards__side--back__title">
-              &#x20B9; 555
-            </h3>
-            <a href="#popup" class="btn btn-cards">Order Now</a>
-            </back>
+            <div class="cards__cta">
+              <div class="cards__price-box">
+                <p class="cards__price-only">
+                  only
+                </p>
+                <p class="cards__price-value">
+                  &#8377;495
+                </p>
+              </div>
+              <a href="#popup" class="btn btn--white">Order Now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -199,7 +247,11 @@
     <div class="row u-margin-large-8">
       <div class="stories">
         <figure class="stories__shape">
-          <img src="images/stories-img-1.jpg" alt="story1" class="stories__image">
+          <picture>
+            <source srcset="images/stories-img-1-small.jpg 1x,images/stories-img-1.jpg 2x" alt="story-image-1" media="max-width:37.5em" class="stories__image" src="images/stories-img-1.jpg">
+            <img srcset="images/stories-img-1-small.jpg 1x,images/stories-img-1.jpg 2x" alt="story-image-1" class="stories__image" src="images/stories-img-1.jpg">
+          </picture>
+
           <figcaption class="stories__caption">
             Will Smith
           </figcaption>
@@ -222,7 +274,10 @@
     <div class="row">
       <div class="stories">
         <figure class="stories__shape">
-          <img src="images/stories-img-2.jpg" alt="story1" class="stories__image">
+          <picture>
+            <source srcset="images/stories-img-2-small.jpg 1x, images/stories-img-2.jpg 2x" alt="story-image-1" class="stories__image" media="max-width:37.5em" src="images/stories-img-2.jpg">
+            <img srcset="images/stories-img-2-small.jpg 1x,images/stories-img-2.jpg 2x" alt="story-image-1" class="stories__image" src="images/stories-img-2.jpg">
+          </picture>
           <figcaption class="stories__caption">
             Martha William
           </figcaption>
@@ -320,8 +375,21 @@
   <div class="popup" id="popup">
     <div class="popup__content">
       <div class="popup__img-box">
-        <img src="images/cards-iced-tea.jpg" alt="" class="popup__img">
-        <img src="images/cards-espresso.jpg" alt="" class="popup__img">
+
+        <img srcset="images/cards-iced-tea-small.jpg 525w,images/cards-iced-tea.jpg 750w"
+             sizes="(max-width: 900px) 40vw,(max-width: 600px) 60vw"
+             class="popup__img"
+             src="images/cards-iced-tea.jpg"
+             alt="popup-img-1">
+
+        <img srcset="images/cards-espresso-small.jpg 895w,images/cards-espresso.jpg 1073w"
+             sizes="(max-width: 56.25em) 40vw,(max-width: 37.5em) 60vw, 18.75em"
+             class="popup__img"
+             src="images/cards-iced-tea.jpg"
+             alt="popup-img-2">
+
+        <!-- <img src="images/cards-iced-tea.jpg" alt="" class="popup__img">
+        <img src="images/cards-espresso.jpg" alt="" class="popup__img"> -->
       </div>
       <div class="popup__text-box">
         <a href="#menu" class="popup__close">&times;</a>
