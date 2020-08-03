@@ -1,0 +1,25 @@
+CSS custom properties or CSS defined variables 
+
+
+
+1. we can specify the variable in the ":root" pseudo classs as below:
+
+	syntax :
+			
+				:root {
+				
+					--color-primary-light: red;
+					--color-primary:dark: yellow;
+					--u-margin-bottom: 8rem;
+					--shadow-color: 0rem 2rem 3rem rgba(balck,0.4);
+				
+				}
+				
+				
+				body {
+				
+					background-image: linear-radient(to right bottom,var(--color-primary-light),var(--color-primary:dark));
+					margin-bootm: var(--u-margin-bottom);
+					box-shadow: var(--shadow-color);
+				
+				}

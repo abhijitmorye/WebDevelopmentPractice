@@ -1,3 +1,35 @@
+FlexBox 
+
+
+Parent Container Properties :
+
+1: flex-direction : row | row-revers | column | column-revers
+
+2: flex-wrap : wrap | no-wrap  -- wrap items on next line if there is no extra space on row
+
+3: justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+
+4: align-items : strech | flex-start | flex-end | center | baseline  -- align items along Y-direction
+
+5: align-content : strech | flex-start | flex-end | center | space-between | space-around -- align items if there are more than one row along y -axis or cross axis
+
+
+Child item properties:
+
+1: align-self: auto | strech | flex-start | flex-end | center | baseline 
+
+2: order: 0;  -- integer value
+
+3: flex-grow : 0  -- integer value  -- row the div along the main-axis or x-axis -- default value is 0
+
+4: flex-shrink: 1  -- integer value  -- 1(default value) means allow to shrink and 0 means dont shrink
+
+5: flex-basis: auto -- length
+
+
+**********************************************Explanantion******************************************************8
+
+
 Flex-direction : row column, row-reverse.column-reverse
 
 justify-content: flex-start,flex-end,center,space-between,space-around
@@ -26,3 +58,7 @@ flex: summarize all three properties i.e. grow,shrink,flex-basis
 	  Syntax --> flex: grow_value,shrink_value,flex-basis(width)
 	  
 	  e.g-->  flex: 1,1,100
+	  
+	  
+	  
+	

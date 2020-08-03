@@ -1,0 +1,21 @@
+Use of SVG in html
+
+
+1. Go to IcoMoon.io site to select the svg file that you want.
+
+2. download the zip file (make sure that you deselct the PNG in setting of svg)
+
+3. Copy the SVG folder and symbol-defs.svg (rename it to the sprite.svg/ or whatever you like) in project's img folder.
+
+4. in html, we can use the SVG using following link.
+
+5. Syntax :
+
+			<svg>
+			
+				<use xlink:href="img/sprite.svg#icon-name"></use>
+			
+			</svg>
+			
+			
+9:47
