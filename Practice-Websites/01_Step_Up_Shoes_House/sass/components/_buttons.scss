@@ -1,0 +1,80 @@
+.btn-inline {
+  border: none;
+  color: $color-primary;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-right: 2rem;
+  background-color: $grey-light-1;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.2s;
+
+  & span {
+    margin-left: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: $grey-dark-2;
+
+    span {
+      margin-left: 1rem;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation-name: pulsate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.cta__button {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $color-white;
+  font-family: inherit;
+  border: none;
+  background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 2rem 7.5rem;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {}
+
+  &__invisible {
+    position: absolute;
+    top: -100%;
+    left: 0;
+  }
+
+  &:hover &__invisible {
+    top: 40%;
+  }
+
+  &:hover &__visible {
+    transform: translateY(10rem);
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left,$color-primary-light,$color-primary-dark);
+  }
+
+  &:focus {
+    outline: none;
+    animation-name: pulsate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}

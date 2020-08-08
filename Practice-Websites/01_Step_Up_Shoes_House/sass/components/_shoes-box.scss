@@ -1,0 +1,78 @@
+.shoes-box {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  margin-right: 4.5rem;
+  font-size: 1.5rem;
+
+  &__description-text {
+    font-size: inherit;
+
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 3rem 0;
+    border-top: 1px solid $grey-light-4;
+    border-bottom: 1px solid $grey-light-4;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__items {
+    font-size: inherit;
+    flex: 0 0 50%;
+    margin-bottom: 1rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin-right: 1.5rem;
+      background-image: url("../images/chevron-thin-right.svg");
+      background-size: cover;
+      // -webkit-mask-image: url('../images/chevron-thin-right.svg');
+      // -webkit-mask-size: cover;
+      // -mask-image: url('../images/chevron-thin-right.svg');
+      // -mask-size: cover;
+      // background-color: $color-primary;
+      @supports(-webkit-mask-image: url("../images/chevron-thin-right.svg')") or (-mask-image: url('../images/chevron-thin-right.svg')) {
+        -webkit-mask-image: url("../images/chevron-thin-right.svg");
+        -webkit-mask-size: cover;
+        -mask-image: url("../images/chevron-thin-right.svg");
+        -mask-size: cover;
+        background-color: $color-primary;
+        background-image: none;
+      }
+    }
+  }
+
+  &__recommendation-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__recommendation-text {
+    font-size: 1.2rem;
+  }
+
+  &__photo-box {}
+
+  &__photo {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 3px solid $color-white;
+
+    &:not(:last-child) {
+      margin-right: -2rem;
+    }
+  }
+}

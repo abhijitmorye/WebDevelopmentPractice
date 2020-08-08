@@ -1,0 +1,13 @@
+.main {
+  flex: 1;
+}
+
+.shoes-box-main {
+  display: flex;
+  padding: 4.5rem;
+  background-color: $grey-light-1;
+  border-bottom: 1px solid $grey-light-4;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}

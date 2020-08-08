@@ -1,0 +1,67 @@
+.comment-box {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  @include respond(phone) {
+    margin-top: 3rem;
+  }
+
+  &__comments {
+    padding: 3rem;
+    background-color: $color-white;
+    margin-bottom: 3rem;
+    box-shadow: 0 1rem 2rem rgba($color-black,0.4);
+    position: relative;
+
+    &::before {
+      content: "\201C";
+      display: inline-block;
+      position: absolute;
+      top: -6rem;
+      left: 0;
+      font-size: 15rem;
+      color: $grey-light-2;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+
+  &__user-details {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  &__user-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $grey-dark-1;
+  }
+
+  &__user-date {
+    font-size: 0.9rem;
+  }
+
+  &__user-ratings {
+    font-size: 2.25rem;
+    color: $color-primary;
+  }
+}

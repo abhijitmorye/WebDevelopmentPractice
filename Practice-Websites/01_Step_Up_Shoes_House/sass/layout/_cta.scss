@@ -1,0 +1,11 @@
+.cta {
+  background-color: $color-white;
+  text-align: center;
+  padding: 3rem 0;
+
+  &__text {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,25 @@
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/search";
+@import "components/user-nav";
+@import "components/side-bar";
+@import "components/shoes-gallery";
+@import "components/shoes-deatils";
+@import "components/buttons";
+@import "components/shoes-box";
+@import "components/comment-box";
+
+
+@import "layout/container";
+@import "layout/header";
+@import "layout/content";
+@import "layout/cta";
+
+@import "pages/home";
