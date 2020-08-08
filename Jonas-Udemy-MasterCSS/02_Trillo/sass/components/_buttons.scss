@@ -1,0 +1,82 @@
+.btn-inline {
+  cursor: pointer;
+  border: none;
+  color: $primary;
+  font-size: inherit;
+  border-bottom: 1px solid currentcolor;
+  padding: 0.2rem;
+  background-color: transparent;
+  display: inline-block;
+  transition: all 0.2s;
+
+  & span {
+    margin-left: 3px;
+    transition: margin-left 0.2s;
+  }
+
+  &:hover {
+    color: $grey-dark-2;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation-name: pulsate;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+  }
+}
+////// this is bbok now button
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right,$primary-light,$primary-dark);
+  color: $color-white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__hidden {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left,$primary-light,$primary-dark);
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__hidden {
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation-name: pulsate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}

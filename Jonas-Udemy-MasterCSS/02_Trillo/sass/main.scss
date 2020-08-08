@@ -10,10 +10,20 @@
 @import "components/sidebar";
 @import "components/search";
 @import "components/user-nav";
+@import "components/gallery";
+@import "components/hotel-overview";
+@import "components/buttons";
+@import "components/list";
+@import "components/recommend";
+@import "components/reviews";
+@import "components/cta";
+
+
 
 @import "layout/container";
 @import "layout/header";
 @import "layout/content";
 @import "layout/hotel-view";
+@import "layout/hotel-details";
 
 @import "pages/home";

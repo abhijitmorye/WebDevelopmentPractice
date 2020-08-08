@@ -1,9 +1,19 @@
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: $color-white;
-  border-bottom: $grey-light-2;
+  border-bottom: 1px solid $grey-light-2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include respond(small-phone) {
+    flex-wrap: wrap;
+    //align-content: space-around; // if flex-wrap is set to wrap then use this property.
+    height: 12rem;
+  }
 
-  &__logo   {
+  &__logo {
     height: 3.25rem;
+    margin-left: 1.5rem;
   }
 }

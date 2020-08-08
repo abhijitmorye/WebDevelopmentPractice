@@ -774,3 +774,131 @@ Ans :
 					top: 0;
 					
 				}
+				
+				
+				
+				
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+Use of currentcolor :
+
+
+will inherit the color(color of text) of parent or current element.
+
+One cool use of "currentcolor" is that if if we have setuo the color change on hover effect on parent element and set "currentcolor" as color in child then its color also chnages on hover effect.
+
+
+
+	Syntax :
+	
+			<div class="div">
+			
+				<p> This is me </p>
+				
+			</div>
+			
+			
+			.div {
+			
+				color: red;
+			}
+			
+			.div:hover {
+			
+				color: blue;
+			}
+			
+			p {
+			
+				color: currentcolor;
+				
+			}
+			
+			
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+How to create blank space between flex items when justify-content can not be used?
+
+				__________________________________
+				|  ___	 ___	          ___	 |
+				| | 1 |	| 2	|			 | 3 |	 | ---- main container
+				| |___|	|___| 			 |___|	 |
+				|			child-container		 |
+				|________________________________|
+	Syntax :
+				
+				<div class="container"> 
+					
+					<div class="container-child-1"> 
+				
+					</div>
+					
+					<div class="container-child-2"> 
+				
+					</div>
+					
+					<div class="container-child-3"> 
+				
+					</div>
+
+				</div>
+				
+				.container {
+				 
+					display: flex:
+				 }
+				 
+				 .container-child-2 {
+				 
+					margin-right: auto;
+				 
+				 }
+				 
+				 
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+How to set SVG as list style to list_items? -- use of "-webkit-mask-image" property.
+
+
+	syntax : 
+	
+				<ul class="list">
+					<li class="list__item">Close to the beach</li>
+					<li class="list__item">Breakfast included</li>
+					<li class="list__item">Free airport shuttle</li>
+					<li class="list__item">Free wifi</li>
+					<li class="list__item">Air conditioning and heatig</li>
+					<li class="list__item">Pets allowed</li>
+					<li class="list__item">We speak all langauges</li>
+					<li class="list__item">Perfect for families</li>
+                </ul>
+				
+				
+				
+				.list {
+				
+					list-style-type: none; // this will elimenate default list style type
+				
+				}
+				
+				
+				.list_item {
+				
+					provide any property for list_item
+				}
+				
+				.list_item::before {
+				
+					content: "";				
+					height: 2rem;
+					width: 2rem;
+					background-color: red  // add red color so that small box will have red color;
+					-webkit-mask-image: {path_to_svg};
+					-webkit-mask-size: cover;				
+				
+				}
+				
+	So "-webkit-mask-image" property will act as window that will allow to see the background through it and covering remaining part.
