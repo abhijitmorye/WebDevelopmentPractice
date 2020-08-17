@@ -1,34 +1,473 @@
-Grid Layout :
+Definitions :
 
-display: grid
+Grid track : row or column  in grid
 
-grid-template-columns : specifies the no of columns with theire width: for eg: grid-template-columns: 10px 20px 40px (create 3 grupns i n grfs whith their width.
+Gutter / Grid Line : line between two grid adjecent row or adjecent columns.  There always (row+1 or column+1) grid-line or gutters.
 
-grid-column-gap: specifies the gap between two adjacent column.
+Grid_area : Area between two row and two column.
 
-
-
-
-grid-template-rows: specifies the no.of rows with their height for eg: grid-template-rows: 10px 20px 30px (creates the 3 rwos with 10px, 20px and 30px heights respectively)
+Grid-cell : single cell.
 
 
-grid-row-gap: specifies the gap between two adjacent row.
 
-grid-gap: shorthand property for grid-column-gap and grid-row-gap --> syntax:--> grid-gap: row-gap-value column-gap-value
-
-justify-content: same as flexbox.. justify-content: start,end,center,space-evenly(same as space-between in flexbox),space-around (it moves the content horizontally..same for flexbox and grid)
+Grid Properties :
 
 
-align-content: same as flexbox--> space-evenly,space-between(create void between items and push then far aside thus creating space between)
-								  space-around,start,end 
-								  it moves the the content vertically.same for flexbox and grid)
+Container -- to which "display:grid" property is applied
+
+*****************************************************************************************************************************************************************
 
 
-grid-column: spawn the space of item to which this property has assigned from specified to starting line to ending line. syntax--> grid-column: 1 / 3 (i.e take space of item from starting line or column 1 to ending column 3)
+      --grid-template-rows :   Defines the no of rows with its height:
 
-grid-row: spawn the space of item to which this property has assigned from specified to starting line to ending line. syntax--> grid-row: 1 / 3 (i.e take space of item from starting line or row 1 to ending row 3)
+							    Syntax :
+									
+									grid-template-rows: 150px 150px;  // will create the two rows on container of 150px each.
+									
+									
+									
+									
+									
+									
+      --grid-template-columns: Defines the no of columns with its width:
+
+							    Syntax :
+									
+									grid-template-columns: 150px 150px;  // will create the two columns on container of 150px each.
+									
+									
+									
+	  --Note : repeat(no of columns,height/width of row or column)
+		
+								Syntax:
+										
+										
+									grid-template-rows: repeat(2,150px);
+									grid-template-columns: repeat(3,150px);
+									
+									
+      --Note :  to allow row or column to occupy the remaining space using fractional unit. (1 fr means 1fractio of contianer)
+		
+								
+								syntax: 
+									
+										grid-template-rows: repeat(2,150px) 1fr;  // will create two rows of 150px height and 3rd rows that occupy the remaining height of container.
+										
+										grid-template-columns: repeat(3,150px) 1fr; // will create the 3 columns with width 150px each and 4th column will occupy the remaining width of container.
+										
+										
+										
+		Note: How to create rows and columns of same height and width respectively.
+		
+		
+								Syntax:
+								
+									grid-template-rows:  repeat(3,1fr);    // will create the 3 rows of equal height.
+									
+									grid-template-columns: repeat(3,1fr);  // will create the 3 columns of same width.
+									
+									
+		
+		Note :
+			
+				further use of "fr" in CSS rid
+				
+				
+								Syntax:
+									
+									grid-template-rows:     1fr 3fr 3fr // here contianer will have 7 divisons i.e. 7fr and 3 rows. 1 row's height will be 1fr, 2nd and 3rd row's height will be 3fr.
+									
+									
+								    grid-template-columns:  2fr 4fr 6fr // here container will have 12 divisons i.e 12fr and 3 columns. 1ts column's width will be 2fr, 2nd column's width will be 4fr and 3rd column's width will be 6fr.										
+										
 
 
-grid-area: shorthand property for above two properties.
+									
+*****************************************************************************************************************************************************************									
 
-		   synatx: grid-area: row-start / column-start / row-end / column-end
+
+
+
+									
+        --grid-template-area:	we can actually specify the name of each cell. suppose we have 3*2 grid i.e 3 rows and 2 columns then we can specify the name of each cell as follows
+		
+								
+								Syntax:
+								
+										
+									.container {
+									
+										display               :   grid;
+										grid-template-rows    :   100px 200px 300px;
+										grid-template-columns :   200px 300px;
+										
+										grid-template-areas    :    "head head"       // 1st row with 2 column hence two names but can be same
+																   "main  main"		 // 2nd row with 2 columns hence 2 name
+																   "footer footer"   // 3rd row and 2 columns hence 2 names.
+									}
+									
+								To use this grid-areas-names, we have to use grid-area property as follow
+								
+								
+									.header {
+										grid-area: head;  // will occupy the all "head" cells. 
+									}
+									
+									.main {
+										grid-area: main;  // will occupy the all "main" cells.
+									}
+									
+									.footer {
+										grid-area: footer;  // will occupy the all "footer" cells.
+									}
+
+
+*****************************************************************************************************************************************************************
+
+		
+        
+        --grid-row-gap: 		Define the gap between two rows.
+		
+								Syntax :
+										
+										grid-row-gap: 30px // will create the gap of 30px between two rows.
+										
+										
+										
+										
+										
+        --grid-column-gap:      Define the gap between two columns.
+		
+								Syntax :
+										
+										grid-column-gap: 30px // will create the gap of 30px between two columns.
+										
+										
+		
+		--grid-gap:				Defines the gap beyween row as well as column
+						
+								Syntax: 
+										
+										grid-gap: 30px    // will create the gap of 30px between row and column.
+		
+        
+
+*****************************************************************************************************************************************************************
+
+
+        
+        --justify-items:         will place the child of element inside the cell of container along X-axis.
+							     
+								 Syntax: 
+								 
+									align-items: center/strech(deafult value) / start / end;
+		
+							
+		
+		
+*****************************************************************************************************************************************************************
+
+
+
+        --align-items:          align items or elements or child elements inside the cell of container along Y-axis
+								
+								Syntax:
+								
+									align-items: center / strech(default value) / end / start
+									
+									
+
+*****************************************************************************************************************************************************************
+
+									
+        --justify-content:      align the columns of grid along the x-axis.
+		
+								Syntax:
+									
+									justify-content: start/center/end/space-between/space-around
+									
+									
+									
+        --align-content:		align the rows of grid alog the Y-axis.
+		
+								Syntax:
+									
+									align-content: start/end/center/space-between/space-around
+		
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+To direct child elements :
+
+
+*****************************************************************************************************************************************************************
+
+        --grid-row-start:       will put the grid-cell after specified grid-row-line i.e. starting row line.
+        --grid-row-end:         the ending row-line
+		
+		
+							    Syntax: 
+								
+										grid-row-start: 3;
+										grid-row-end: 4 
+										
+										
+										// this will put the grid-cell between grid-row-line 3 and 4.
+										
+										
+		Note : shorthand property
+			
+								Syntax: 
+								
+										grid-row: 3/4;   start-row-line/end-row-line
+							
+									
+
+*****************************************************************************************************************************************************************
+
+
+
+
+        --grid-column-start:	will put the grid-cell after the grid-column-line i.e. starting column line
+        --grid-column-end:		the ending column line
+		
+		
+								Syntax: 
+								
+										grid-column-start: 3;
+										grid-column-end: 4 
+										
+										
+										// this will put the grid-cell between grid-column-line 3 and 4.
+										
+		
+		Note : shorthand property
+			
+								Syntax: 
+								
+										grid-column: 3/4;   start-row-line/end-row-line
+										
+										
+
+*****************************************************************************************************************************************************************
+
+
+										
+		
+		Note : Ultimate shorthand property for the grid-row-start/end and grid-column-start/end is "grid-area"
+		
+		
+								Syntax: 
+											
+										grid-area: 2 / 3 / 3 / 4 ;  --- start-row-line / start-column-line / end-row-line / end-column-line
+										
+										
+
+*****************************************************************************************************************************************************************
+
+
+
+										
+		
+		Spannig the grid-cell for more than 1 cell.
+		
+		
+								Syntax: 
+								
+										grid-row: 1 / 3            // this will start the grid-cell from grid-rwo-line 1 till the grid-row-line 3.
+										
+										grid-column: 3/ 5          // this will start the grid -cell from the grid-column-line 3 till the grid-column-line 5
+										
+										
+									
+								Syntax:
+								
+										grid-row: 1 / span 3     // starts from grid-row-line 1 and spans the 3 grid-cell i.e till grid-row-line 4
+										
+										grid-column: 3/ span 2   // starts from grid-column-line 3 and spans the 2 cells i.e. till grid-column-line 5
+										
+										
+								if we are not aware about the no of columns or rows in container then we can write as follows;
+								
+										
+										grid-row:        1 / -1    // start from grid-row-line from 1 till end 
+										
+										grid-column:     3 /  -1     // start the grid-column from 3 till the end.
+							
+
+
+*****************************************************************************************************************************************************************
+
+
+
+        --order:
+
+
+
+*****************************************************************************************************************************************************************
+
+
+
+        --justify-self:		    will align itself i.e child elements can align itself  along X-axis using this property and overriding the property set at the parent element.
+		
+								Syntax:
+								
+									justify-self: center / strech (default value) / start / end;
+		
+		
+		
+*****************************************************************************************************************************************************************		
+	
+
+	
+			
+        --align-self:			will align iteslf i.e child elements can align itself along Y-axis using this property and overriding setting set at the parent element
+		
+								Syntax:
+								
+									justify-self:  center / strech / (default value) / start / end;
+									
+
+
+
+*****************************************************************************************************************************************************************
+
+
+	
+	How we can name the grid-row-line or grid-column-line?
+	
+	
+	.container {
+	
+		display: grid;   // suppose we have 3 row and 2 columns
+		
+		grid-template-rows: [header-start] 200px [header-end  main-content-start] 500px [main-content-end  footer-start] 200px [footer-end]
+		grid-template-columns: repeat( 3, [col-start] 400px [col-end) 1fr [col2-end] ; 
+	
+	}
+	
+	
+	
+	// we can give a name of row-grid line by  adding  [name-start] before specifying the height/width of particular row/column and then type in [name-end] after specifying the height/width.
+	   we can give multiple names to the single grid line.
+	   
+	
+	
+	// In case of repeat, we can name of starting and ending line like this : repeat(3 , [start-name] 300px [end-name]) 200px [end-name-2]
+
+	   Here in this case,we are repeating the 3 columns of 300px width, so we have give hname [start-name] and [end-name],
+	   
+	   so this is equivalent to :
+	   
+	   [col-start 1] 300px [col-end 1 col-start 2] 300px [col-end 2 col-start 3] 300px [col-end 3]
+	   
+	   
+	   How to use this,
+	   
+	   
+	   .header {
+	   
+		grid-row:    header-start / header-end  
+		grid-colum:  col-start 1 / col-end 3 // will ocuppy the entire row
+	   }
+	   
+	   .main {
+		
+		grid-row:    main-content-start / main content-end;
+		grid-column: col-start 1 / col-end 2;
+	   
+	   }
+
+
+
+*****************************************************************************************************************************************************************
+
+
+
+The no rows and columns that we specified are known as "explicit-grid" while if there are any extra content in the "div" element then it will occupy in other rows and columns that are created automatically.
+This automatically created rows and columns are known as "implicit-grid".
+		
+	   
+	   We can specify the height and width of automatically created areas as follws:
+	   
+	   
+	   Syntax:	   
+			
+		grid-auto-rows: 100px;
+		grid-auto-columns : 120px;
+		
+		
+
+But here is catch, by default CSS floats the extra rows and columns as rows. since CSS sets "grid-auto-flow: row" i.e if there are any extras elements then keep them in
+a automatic created rows. But we can change using the same property i.e
+
+
+		Syntax:
+			
+			grid-auto-flow: column;
+			
+
+
+*****************************************************************************************************************************************************************
+
+
+dense :  dense keyword will make sure that there wont be any extra holes in container. so all container will be packed.
+
+
+		 Syntax:
+		 
+			grid-auto-row: 90px dense;
+			
+			
+			
+
+*****************************************************************************************************************************************************************
+
+
+max-content : if we specify the max-content as height or width of row or column then it will try to create height or width according to the longest content in div. No line breaks
+
+
+		Syntax:
+			
+			grid-template-column:  max-content 1fr 1fr min-content;
+
+
+min-content :  try to occupy the the content in div in minimum height and width.
+
+
+		Syntax:
+			
+			grid-template-row: repeat(2,min-content);
+			
+			
+			
+
+min-max function:  we can specify the min and max value for  height and iwdth using minmax function:
+
+
+		Syntax:
+			
+			grid-template-columns: repeat(2,minmax(150px,min-content));
+			
+			
+*****************************************************************************************************************************************************************
+
+
+auto-fill:   auto fill will create no of rows or column based on given height and width. with empty columns and rows. with decreasing width, it will try to keep width of div intact by moving div to next row or column.
+
+			Syntax:
+				
+				grid-template-columns: repeat(auto-fill,100px);
+				
+		
+
+auto-fit:   auto-fit will create no of columns and rows based on given height and width but empty columns and rows will be collapsed.
+
+		
+			Syntax: 
+				
+				grid-template-columns:  repeat(auto-fit,100px);
