@@ -160,7 +160,7 @@ Container -- to which "display:grid" property is applied
 							     
 								 Syntax: 
 								 
-									align-items: center/strech(deafult value) / start / end;
+									justify-items: center/strech(deafult value) / start / end;
 		
 							
 		

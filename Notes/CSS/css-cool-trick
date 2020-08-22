@@ -446,11 +446,11 @@ syntax:
 		height: 15rem;
 		width: 15rem;
 		float:left; // will float the div or img to the left and text to the right but the text will not be properly aligned with shape of div.
-		-webkit-clip-path: circle(50% at 50% 50%) // 1st 50% defines the radius of circle, here 50% of height and width of div. so 50% of 15rem = 7.5rem will be radius and thus creating circle that has diameter of 17rem and touching the sides of div. 
+		-webkit-clip-path: circle(50% at 50% 50%) // 1st 50% defines the radius of circle, here 50% of height and width of div. so 50% of 15rem = 7.5rem will be radius and thus creating circle that has diameter of 15rem and touching the sides of div. 
 		-shape-outside: circle(50% at 50% 50%) // this specifie how the text will be aligned according the shape of div.
 
 		
-Note: shape-outside property requires to have height,width and float property to be defied to element to which shape-outside property is applied.
+Note: shape-outside property requires to have height,width and float property to be defined to element to which shape-outside property is applied.
 		
 		
 		}
@@ -902,3 +902,34 @@ How to set SVG as list style to list_items? -- use of "-webkit-mask-image" prope
 				}
 				
 	So "-webkit-mask-image" property will act as window that will allow to see the background through it and covering remaining part.
+	
+	
+	
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+Use of "Object-fit" property :
+
+
+		"Obejct-fit" property can be used on image to fit the imaage inside the div element.
+		
+		
+		Syntax:
+				
+				<div class="div">				
+					<img src="path to img" alt="" class="div__img">					
+				</div>
+				
+				
+				.div {
+					
+					width: 40%;
+				
+				}
+				
+				.div__img {
+				
+					width: 100%;
+					height: 100%;
+					object-fit: cover;  // remember to actually see the effect of object-fit, you have to specify both height and width.
+				
+				}
