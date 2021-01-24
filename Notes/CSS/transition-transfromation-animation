@@ -15,7 +15,7 @@ eg :  button {
 					background-color: yellow}
 					
 					
-	in above example, whenever you hove on the button, its background color changes from red to yellow. Here transition property define how we can transition background color from red to yellow.
+	in above example, whenever you hover on the button, its background color changes from red to yellow. Here transition property define how we can transition background color from red to yellow.
 	
 	Syntax--> transition: property duration style delay
 	
@@ -40,7 +40,7 @@ Transform property:
 		specifies the transformation of elements
 		
 		
-		1) translate(x-shift,y-shift) : translate or move the elements aling x and y axis
+		1) translate(x-shift,y-shift) : translate or move the elements along x and y axis
 		
 		   syntax--> transform: translate(x-axis-shift,y-axix-shift) i.e (horizontal shift, vertical shift) i.e (positive means right horizontal-negative means left horizontal && positive means in top direction and negative menas downward direction)
 		   
