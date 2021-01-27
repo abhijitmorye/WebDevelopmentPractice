@@ -7,7 +7,7 @@ Useful notes regarding how browser decides value for font,height in pixels:
 
 3. Percentages-font-sizes are measured relative to the parent's font-size.
 
-4. Percentage-length is measured relative to the width of parent's.
+4. Percentage-length(width/height) is measured relative to the width of parent's.
 
 5. If font is specified in em then its pixel value is equivalent to the (specified ems * font-size of parent) -- eg. 3em -- 3* 24px if 24px is font-size in parent.
 
@@ -38,7 +38,7 @@ Useful notes regarding inheritence in CSS:
 Box models : Inline, Block-level,Inline-block
 
 
-1. Block Level : elements formatted visyally as block
+1. Block Level : elements formatted visually as block
 				 100% of parent's width
 				 vertically,one after another
 				 Box-model applies as showed
