@@ -1,0 +1,21 @@
+BEM - Bloack Element Modifier
+
+
+BLACK - standalone component that is meaningful on its own.
+
+ELEMENT - part of block that has no standalone meaning.
+
+MODIFIER - a different version of a bloack or an element.
+
+
+.Block {
+
+}
+
+.Block__element {
+
+}
+
+.Bloack__element--modifier {
+
+}
