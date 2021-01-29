@@ -170,7 +170,7 @@ and write content in specified element style.
 		
 			@include mixin_name {
 			
-				font-size: 50%
+				font-size: 50%;
 			
 			}
 		}
@@ -228,7 +228,7 @@ Writing media queries using @if and @content directives.
 						
 						
 
-Here in mixin part, e are passing an argument($variable) which will be compared with value (if $variable == phone) and specific media query will be applied.
+Here in mixin part, we are passing an argument($variable) which will be compared with value (if $variable == phone) and specific media query will be applied.
 
 		
 
