@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /*
+     if font-size is 100% then its absolute value is 16px
+     so to set value of 10px -- divide 10 by 16 and multiply by 100 gives 
+     you 62.5% which is 10px
+    */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color : $color-grey-dark;
+    padding: 3rem;
+    box-sizing: border-box;
+}
