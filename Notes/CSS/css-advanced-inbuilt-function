@@ -1,6 +1,7 @@
 css advanced inbuilt function
 
 
+To use variables in calc() function, we have to use #{$variable}
 1. calc() :
 
 	syntax: div {
