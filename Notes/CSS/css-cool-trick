@@ -933,3 +933,16 @@ Use of "Object-fit" property :
 					object-fit: cover;  // remember to actually see the effect of object-fit, you have to specify both height and width.
 				
 				}
+
+
+---------------------------------------------------------------------------------*******************-------------------------------------------------------------
+
+
+background-blend-mode: blends or mix the background image with color accordingly.
+
+	Syntax :
+		
+		.div-class {
+			background-image: linear-gradient(to right bottom,color1,color 2),url("image_path");
+			background-blend-mode: scrren
+		}
