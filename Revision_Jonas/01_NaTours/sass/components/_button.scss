@@ -39,12 +39,23 @@
         
     }
 
+    &--green {
+        background-color: $color_primary_light;
+        color: $color-white;
+
+        
+        &::after{
+            background-color: $color_primary_light;
+        }
+        
+    }
+
     &::after {
         content : "";
         display: inline-block;
         height: 100%;
         width: 100%;
-        border-radius : 100px;
+        border-radius : 10rem;
         top: 0;
         left: 0;
         position: absolute;
