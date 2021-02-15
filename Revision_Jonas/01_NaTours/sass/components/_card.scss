@@ -13,7 +13,7 @@
         width: 100%;
         backface-visibility: hidden; // the back card which is already at 180deg will be hidden
         border-radius: 3px;
-        box-shadow: 0rem 1.5rem 4rem rgba($color-black,0.15);
+        box-shadow: 0rem 1.5rem 4rem rgba($color-black, 0.15);
         overflow: hidden;
 
         &--front {
@@ -25,68 +25,71 @@
 
             &--1 {
                 background-image: linear-gradient(to right bottom,
-                                    $color-secondary-light,
-                                    $color-secondary-dark);
+                        $color-secondary-light,
+                        $color-secondary-dark);
             }
 
             &--2 {
                 background-image: linear-gradient(to right bottom,
-                                    $color-primary-light,
-                                    $color-primary-dark);
+                        $color-primary-light,
+                        $color-primary-dark);
             }
+
             &--3 {
                 background-image: linear-gradient(to right bottom,
-                                    $color-tertiary-light,
-                                    $color-tertiary-dark);
+                        $color-tertiary-light,
+                        $color-tertiary-dark);
             }
         }
     }
-    
+
 
     &:hover &__side--front {
         transform: rotateY(-180deg);
     }
 
-    &:hover &__side--back{
+    &:hover &__side--back {
         transform: rotateY(0deg);
     }
 
     &__picture {
-        background-size: cover; 
+        background-size: cover;
         height: 23rem;
-        clip-path: polygon(0% 0%,100% 0%,100% 85%,0% 100%);
-        -webkit-clip-path: polygon(0% 0%,100% 0%,100% 85%,0 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0 100%);
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
 
         &--1 {
-           background-image: linear-gradient(to right bottom,
-                                            $color-secondary-light,
-                                            $color-secondary-dark),
-                                            url('../img/nat-5.jpg');
-           background-blend-mode: screen;
-           
+            background-image: linear-gradient(to right bottom,
+                    $color-secondary-light,
+                    $color-secondary-dark),
+                url('../img/nat-5.jpg');
+            background-blend-mode: screen;
+
         }
+
         &--2 {
             background-image: linear-gradient(to right bottom,
-                                            $color-primary-light,
-                                            $color-primary-dark),
-                                            url('../img/nat-6.jpg');
+                    $color-primary-light,
+                    $color-primary-dark),
+                url('../img/nat-6.jpg');
             background-blend-mode: screen;
-            
-         }
-         &--3 {
+
+        }
+
+        &--3 {
             background-image: linear-gradient(to right bottom,
-                                            $color-tertiary-light,
-                                            $color-tertiary-dark),
-                                            url('../img/nat-7.jpg');
+                    $color-tertiary-light,
+                    $color-tertiary-dark),
+                url('../img/nat-7.jpg');
             background-blend-mode: screen;
-            
-         }
+
+        }
     }
 
     &__heading {
-        font-size : 2.8rem;
+        font-size: 2.8rem;
         font-weight: 300;
         text-transform: uppercase;
         color: $color-white;
@@ -104,18 +107,20 @@
 
         &--1 {
             background-image: linear-gradient(to right,
-                              rgba($color-secondary-light,0.8),
-                              rgba($color-secondary-dark,0.8));
+                    rgba($color-secondary-light, 0.8),
+                    rgba($color-secondary-dark, 0.8));
         }
+
         &--2 {
             background-image: linear-gradient(to right,
-                              rgba($color-primary-light,0.8),
-                              rgba($color-primary-dark,0.8));
+                    rgba($color-primary-light, 0.8),
+                    rgba($color-primary-dark, 0.8));
         }
+
         &--3 {
             background-image: linear-gradient(to right,
-                              rgba($color-tertiary-light,0.8),
-                              rgba($color-tertiary-dark,0.8));
+                    rgba($color-tertiary-light, 0.8),
+                    rgba($color-tertiary-dark, 0.8));
         }
     }
 
@@ -127,40 +132,40 @@
             width: 80%;
             margin: 0 auto;
 
-            li{
+            li {
                 text-align: center;
                 font-size: 1.5rem;
                 padding: 1rem;
-                
-                &:not(:last-child){
+
+                &:not(:last-child) {
                     border-bottom: 2px solid $color-grey-white-2;
                 }
             }
         }
     }
 
-    &__cta{
+    &__cta {
 
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 90%;
         text-align: center;
     }
 
-    &__price-box{
+    &__price-box {
         text-align: center;
         color: $color-white;
         margin-bottom: 8rem;
     }
 
-    &__price-only{
+    &__price-only {
         font-size: 1.4rem;
         text-transform: uppercase;
     }
 
-    &__price-value{
+    &__price-value {
         font-size: 6rem;
         font-weight: 100
     }
